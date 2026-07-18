@@ -1,0 +1,29 @@
+:root {
+  --font: 'gilroy', sans-serif;
+  --title: 'dessert-script', sans-serif;
+
+  --white: #ffffff;
+  --grey: #eef2ec;
+  --black: #000000;
+  --light-blue: #e5f0f8;
+  --bg-blue: #9ed1ea;
+  --blue: #02acf7;
+  --invalid: #ffe26b;
+}
+
+@import 'mixins';
+@import 'reset';
+@import 'preloader';
+@import 'fonts';
+@import 'tiography';
+@import 'forms';
+@import 'select';
+@import 'buttons';
+@import 'header';
+@import 'swiper';
+@import 'accordeon';
+@import 'popup';
+@import 'dropzone';
+@import 'footer';
+
+//@supports (-webkit-touch-callout: none) {}
