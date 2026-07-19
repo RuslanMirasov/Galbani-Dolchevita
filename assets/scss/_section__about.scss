@@ -1,0 +1,93 @@
+.section--about {
+  padding-top: 94px;
+  padding-bottom: 40px;
+  background: url('../img/about/about.webp') no-repeat right bottom/cover;
+  color: var(--white);
+
+  .subtitle {
+    max-width: 650px;
+    font-size: 22px;
+    margin-top: 28px;
+  }
+
+  .title--80 span {
+    display: inline-block;
+    max-width: 245px;
+    font-size: 22px;
+    line-height: 1.1;
+    font-family: var(--font);
+    font-weight: 500;
+    margin-left: 20px;
+  }
+}
+
+.about-title {
+  display: block;
+  width: 100%;
+  span {
+    display: inline-block;
+    font-family: var(--font);
+    margin-left: 120px;
+    font-weight: 600;
+    padding: 10px 30px;
+    background: var(--white);
+    border-radius: 50px;
+    color: var(--blue);
+  }
+}
+
+.about-slider {
+  max-width: 730px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+
+  .swiper-slide {
+    opacity: 0 !important;
+    pointer-events: none;
+    &.swiper-slide-fully-visible {
+      opacity: 1 !important;
+      pointer-events: all;
+    }
+  }
+}
+
+.calendar {
+  display: inline-flex;
+  position: relative;
+  color: var(--blue);
+  background: var(--white);
+  align-items: flex-end;
+  padding: 20px 24px 20px 0px;
+  border-radius: 0px 20px 20px 0px;
+  gap: 10px;
+  margin-top: 40px;
+
+  p {
+    display: block;
+    position: relative;
+    z-index: 2;
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  img {
+    position: relative;
+    top: 20px;
+    width: 182px;
+    margin-top: -90px;
+    margin-bottom: 0px;
+    z-index: 2;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 50%;
+    top: 0px;
+    width: 10000px;
+    height: 100%;
+    background: var(--white);
+    z-index: 0;
+  }
+}

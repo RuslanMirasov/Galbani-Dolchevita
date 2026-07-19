@@ -61,6 +61,7 @@ const initSlider = sliderWrapper => {
   if (!swiper) return;
 
   const {
+    autoplay = '',
     effect = 'slide',
     speed = '600',
     spaceBetween = '0,0,0',
@@ -114,6 +115,13 @@ const initSlider = sliderWrapper => {
     options.navigation = {
       prevEl: arrowPrev,
       nextEl: arrowNext,
+    };
+  }
+
+  if (autoplay) {
+    options.autoplay = {
+      delay: autoplay,
+      disableOnInteraction: false,
     };
   }
 

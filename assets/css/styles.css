@@ -168,10 +168,12 @@ button:disabled {
   overflow: hidden;
   z-index: 1;
   padding: 80px 0px;
+  scroll-margin: 60px;
 }
 @media (max-width: 1023px) {
   .section {
     padding: 40px 0px;
+    scroll-margin: 50px;
   }
 }
 .section.full {
@@ -1726,6 +1728,98 @@ button:disabled {
   max-width: 240px;
   font-size: 16px;
   line-height: 1.5;
+}
+
+.section--about {
+  padding-top: 94px;
+  padding-bottom: 40px;
+  background: url("../img/about/about.webp") no-repeat right bottom/cover;
+  color: var(--white);
+}
+.section--about .subtitle {
+  max-width: 650px;
+  font-size: 22px;
+  margin-top: 28px;
+}
+.section--about .title--80 span {
+  display: inline-block;
+  max-width: 245px;
+  font-size: 22px;
+  line-height: 1.1;
+  font-family: var(--font);
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.about-title {
+  display: block;
+  width: 100%;
+}
+.about-title span {
+  display: inline-block;
+  font-family: var(--font);
+  margin-left: 120px;
+  font-weight: 600;
+  padding: 10px 30px;
+  background: var(--white);
+  border-radius: 50px;
+  color: var(--blue);
+}
+
+.about-slider {
+  max-width: 730px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+.about-slider .swiper-slide {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+.about-slider .swiper-slide.swiper-slide-fully-visible {
+  opacity: 1 !important;
+  pointer-events: all;
+}
+
+.calendar {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  color: var(--blue);
+  background: var(--white);
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 20px 24px 20px 0px;
+  border-radius: 0px 20px 20px 0px;
+  gap: 10px;
+  margin-top: 40px;
+}
+.calendar p {
+  display: block;
+  position: relative;
+  z-index: 2;
+  font-size: 22px;
+  line-height: 1.4;
+}
+.calendar img {
+  position: relative;
+  top: 20px;
+  width: 182px;
+  margin-top: -90px;
+  margin-bottom: 0px;
+  z-index: 2;
+}
+.calendar:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 50%;
+  top: 0px;
+  width: 10000px;
+  height: 100%;
+  background: var(--white);
+  z-index: 0;
 }
 
 .section--game {
