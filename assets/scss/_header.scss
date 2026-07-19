@@ -18,11 +18,25 @@
   color: var(--white);
   padding: 0px 50px;
   gap: 20px;
+  @media (max-width: 1439px) {
+    padding: 0px 30px;
+  }
+  @media (max-width: 767px) {
+    padding: 0px 20px;
+    height: 50px;
+  }
 }
 
 .logo-wrapper {
   width: 120px;
   height: 60px;
+  img {
+    width: 100%;
+  }
+  @media (max-width: 767px) {
+    width: 80px;
+    height: 50px;
+  }
 }
 
 .profile-button {
@@ -59,7 +73,7 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  gap: 24px;
+  gap: 32px;
 
   li {
     .menu__link {
@@ -72,6 +86,12 @@
       &:hover,
       &:focus {
         color: var(--bg-blue);
+      }
+    }
+
+    .button {
+      @media (min-width: 1280px) {
+        margin-left: 40px;
       }
     }
   }
@@ -87,7 +107,6 @@
     align-content: center;
     width: 20px;
     height: 50px;
-    background: var(--brown);
     font-size: 0px;
     z-index: 2;
     margin-left: auto;
@@ -142,13 +161,6 @@
     }
   }
 
-  .header__buttons {
-    z-index: 1;
-    span {
-      font-size: 20px;
-    }
-  }
-
   .navigation {
     position: fixed;
     align-items: flex-start;
@@ -160,7 +172,7 @@
     -ms-overflow-style: none;
     top: 0px;
     right: 0px;
-    background: var(--red);
+    background: var(--blue);
     transform: translate(0%, 0%);
     transition: opacity 0.3s ease 0.3s;
     opacity: 0;
@@ -196,7 +208,6 @@
 
   .menu {
     padding: 80px 30px 50px 30px;
-
     @media (max-width: 767px) {
       padding: 60px 20px 40px 20px;
     }
@@ -211,130 +222,31 @@
     gap: 30px;
     li {
       order: 1;
-      &.extra {
-        display: flex;
-      }
-      &:first-child {
-        order: 2;
-        margin-right: 0;
+      &:first-child,
+      &:last-child {
         margin-top: auto;
-        + li {
-          margin-top: auto;
-        }
-        .button {
-          min-width: 290px;
-          height: 54px;
-          background: var(--white);
-          span {
-            color: var(--black);
-            line-height: 1.1;
-          }
-        }
-      }
-      &.last {
-        margin-right: 0;
       }
       .menu__link {
         font-size: 22px;
         font-weight: 500;
       }
-
       .button.small {
         height: 40px;
-        padding-left: 20px;
-        padding-right: 20px;
+        margin-bottom: 30px;
         span {
           font-size: 22px;
           font-weight: 500;
-          @supports (-webkit-touch-callout: none) {
-            padding-bottom: 3px;
-          }
         }
       }
     }
   }
-}
 
-.stycky-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  z-index: 19;
-  gap: 8px; //2
-  width: 150px; //84
-  height: 150px; //84
-  left: 32px; //10
-  bottom: 32px; //10
-  border-radius: 150px;
-  cursor: pointer;
-  transition: transform 0.7s ease-in-out 0s;
-  transform: translate(0px, 200px);
-  background: rgba(188, 5, 31, 0.898);
-  backdrop-filter: blur(5px);
-  color: var(--white);
-  span {
-    font-family: var(--font);
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 20px; // 11
-    line-height: 1;
-  }
+  .profile-button {
+    gap: 12px;
+    font-size: 22px;
 
-  &:before,
-  &:after {
-    content: '';
-    display: block;
-    position: relative;
-    width: 60px; //34
-    height: 10px;
-    background: url('../img/svg/fork.svg') no-repeat center center/contain;
-  }
-
-  &:after {
-    transform: scaleX(-1);
-  }
-
-  &.active {
-    transform: translate(0px, 0px);
-    &.end {
-      transform: translate(0px, 200px);
+    img {
+      width: 32px;
     }
-  }
-
-  @media (max-width: 1439px) {
-    gap: 2px; //2
-    width: 100px; //84
-    height: 100px; //84
-    left: 10px; //10
-    bottom: 10px; //10
-
-    span {
-      font-size: 14px; // 11
-    }
-
-    &:before,
-    &:after {
-      width: 40px; //34
-    }
-  }
-
-  @media (max-width: 1279px) {
-    width: 84px;
-    height: 84px;
-
-    span {
-      font-size: 11px;
-    }
-
-    &:before,
-    &:after {
-      width: 34px;
-    }
-  }
-
-  @media (max-width: 767px) {
-    display: none;
   }
 }
