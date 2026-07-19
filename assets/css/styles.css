@@ -167,6 +167,12 @@ button:disabled {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  padding: 80px 0px;
+}
+@media (max-width: 1023px) {
+  .section {
+    padding: 40px 0px;
+  }
 }
 .section.full {
   min-height: 100svh;
@@ -331,37 +337,14 @@ button:disabled {
   display: block;
   width: 100%;
   margin: 0 auto;
-  line-height: 1.1;
+  line-height: 1;
   text-align: center;
 }
 .title.red {
   color: var(--red);
 }
-.title.circles {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  gap: 20px;
-}
-.title.circles:before, .title.circles:after {
-  content: "";
-  display: block;
-  width: clamp(14px, 1.1111vw, 16px);
-  height: clamp(14px, 1.1111vw, 16px);
-  border-radius: 16px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  background: var(--red);
-}
-.title.circles.green:before, .title.circles.green:after {
-  background: var(--green);
+.title.white {
+  color: var(--white);
 }
 .title.ta--l {
   text-align: left;
@@ -369,42 +352,16 @@ button:disabled {
 .title.upper {
   text-transform: uppercase;
 }
-.title.title--20 {
-  font-size: clamp(14px, 1.3889vw, 20px);
-}
-.title.title--26 {
-  font-size: clamp(26px, 1.8056vw, 26px);
-}
-.title.title--28 {
-  font-size: clamp(22px, 1.9444vw, 50px);
-}
-.title.title--32 {
-  font-size: clamp(22px, 2.2222vw, 32px);
-  max-width: clamp(375px, 51.3889vw, 740px);
-  margin-top: clamp(20px, 2.2222vw, 32px);
-}
-.title.title--40 {
-  font-size: clamp(26px, 2.7778vw, 40px);
-}
-.title.title--42 {
-  font-size: clamp(32px, 2.9167vw, 42px);
-}
-.title.title--46 {
-  font-size: clamp(40px, 3.1944vw, 82px);
-}
-.title.title--60 {
-  font-size: clamp(40px, 4.1667vw, 60px);
-  text-transform: uppercase;
-}
-.title.title--64 {
-  font-size: clamp(40px, 4.4444vw, 64px);
-  text-transform: uppercase;
+.title.title--80 {
+  font-size: clamp(40px, 5.5556vw, 80px);
 }
 
 .subtitle {
   font-size: clamp(20px, 1.6667vw, 24px);
-  line-height: 1.2;
+  line-height: 1.3;
   font-weight: 400;
+}
+.subtitle.ta--c {
   text-align: center;
 }
 
