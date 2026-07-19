@@ -2044,8 +2044,17 @@ button:disabled {
 }
 
 .section--game {
-  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
   background-color: var(--blue);
+  color: var(--white);
+  padding-top: 100px;
+  padding-bottom: 56px;
 }
 .section--game:before {
   content: "";
@@ -2060,6 +2069,44 @@ button:disabled {
   background-position: center center;
   background-size: cover;
   opacity: 0.1;
+}
+.section--game .subtitle {
+  max-width: 580px;
+  margin-top: 40px;
+}
+
+.game-prize-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  max-width: 560px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 56px;
+  margin-top: 42px;
+}
+.game-prize-info .info p {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.game-prize-info .info .button {
+  margin-top: 30px;
+}
+
+.italy-full-image {
+  position: absolute;
+  max-width: 565px;
+  right: -20px;
+  bottom: -50px;
 }
 
 .body.locked {

@@ -1,6 +1,12 @@
 .section--game {
-  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  min-height: 100vh;
   background-color: var(--blue);
+  color: var(--white);
+  padding-top: 100px;
+  padding-bottom: 56px;
 
   &:before {
     content: '';
@@ -16,4 +22,39 @@
     background-size: cover;
     opacity: 0.1;
   }
+
+  .subtitle {
+    max-width: 580px;
+    margin-top: 40px;
+  }
+}
+
+.game-prize-info {
+  display: flex;
+  position: relative;
+  max-width: 560px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 56px;
+  margin-top: 42px;
+
+  .info {
+    p {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+    .button {
+      margin-top: 30px;
+    }
+  }
+}
+
+.italy-full-image {
+  position: absolute;
+  max-width: 565px;
+  right: -20px;
+  bottom: -50px;
 }
