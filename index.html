@@ -51,17 +51,17 @@
               <a href="./#faq" class="menu__link"><span>Вопрос-ответ</span></a>
             </li>
             <li>
-              <button class="button" data-popup-open="cheque"><span>Загрузить чек</span></button>
+              <button class="button small light" data-popup-open="cheque"><span>Загрузить чек</span></button>
             </li>
             <li>
-              <button class="profile-button" data-popup-open="auth">
+              <!-- <button class="profile-button" data-popup-open="auth">
                 <img src="./assets/img/svg/login.svg" alt="Galbani" />
                 <span>Войти</span>
-              </button>
-              <!-- <a href="./profile.html" class="profile-button">
+              </button> -->
+              <a href="./profile.html" class="profile-button">
                 <img src="./assets/img/svg/profile.svg" alt="Galbani" />
                 <span>Профиль</span>
-              </a> -->
+              </a>
             </li>
           </ul>
         </nav>
@@ -73,13 +73,19 @@
 
       <main class="main">
         <!--SECTION HERO-->
-        <section class="section section--hero full">
+        <section class="section section--hero">
           <div class="container">SECTION HERO</div>
         </section>
 
         <!--SECTION HOW TO WIN-->
         <section class="section section--howToWin" id="how-to-win">
-          <div class="container">SECTION HOW TO WIN</div>
+          <div class="container">
+            <button type="button" class="button" data-popup-open="cheque"><span>Зарегистрировать чек</span></button>
+
+            <button type="button" class="button big" data-popup-open="cheque"><span>Зарегистрировать чек</span></button>
+            <button type="button" class="button big light" data-popup-open="cheque"><span>Зарегистрировать чек</span></button>
+            SECTION HOW TO WIN
+          </div>
         </section>
 
         <!--SECTION ABOUT-->
@@ -104,7 +110,10 @@
 
         <!--SECTION FAQ-->
         <section class="section section--faq" id="faq">
-          <div class="container">SECTION FAQ</div>
+          <div class="container">
+            SECTION FAQ
+            <button type="button" class="button red"><span>Задать вопрос</span></button>
+          </div>
         </section>
       </main>
 
