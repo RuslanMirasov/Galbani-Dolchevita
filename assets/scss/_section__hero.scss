@@ -11,7 +11,8 @@
 }
 
 .hero-content {
-  background: linear-gradient(#1e2d68, #294b92);
+  background: linear-gradient(to top, #1e2d68 0%, #294b92 100%);
+
   color: var(--white);
   margin-top: auto;
   display: block;
@@ -22,6 +23,7 @@
 .hero-text {
   display: inline-block;
   text-align: center;
+
   strong {
     font-size: 110px;
     line-height: 1;

@@ -1,0 +1,88 @@
+.howToWin {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1242px;
+  margin: 0 auto;
+  gap: 14px;
+  counter-reset: howToWin;
+
+  li {
+    display: flex;
+    flex: 1;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 18px;
+    text-align: center;
+    counter-increment: howToWin;
+
+    &:before {
+      content: counter(howToWin);
+      display: flex;
+      position: absolute;
+      left: 0px;
+      top: 20px;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      background-color: var(--red);
+      color: var(--white);
+      font-family: var(--title);
+      font-size: 36px;
+      flex-shrink: 0;
+      line-height: 50px;
+      z-index: 2;
+    }
+
+    .button {
+      margin-top: 10px;
+    }
+  }
+}
+
+.howToWin__image {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  z-index: 1;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+  }
+
+  img {
+    position: absolute;
+    width: 166.666666%;
+  }
+}
+
+.howToWin__title,
+.howToWin__text {
+  display: block;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.howToWin__title {
+  font-family: var(--font);
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.howToWin__text {
+  max-width: 240px;
+  font-size: 16px;
+  line-height: 1.5;
+}

@@ -1571,8 +1571,8 @@ button:disabled {
 }
 
 .hero-content {
-  background: -webkit-gradient(linear, left top, left bottom, from(#1e2d68), to(#294b92));
-  background: linear-gradient(#1e2d68, #294b92);
+  background: -webkit-gradient(linear, left bottom, left top, from(#1e2d68), to(#294b92));
+  background: linear-gradient(to top, #1e2d68 0%, #294b92 100%);
   color: var(--white);
   margin-top: auto;
   display: block;
@@ -1611,6 +1611,126 @@ button:disabled {
   -webkit-transform: translate(12.8%, 0%);
       -ms-transform: translate(12.8%, 0%);
           transform: translate(12.8%, 0%);
+}
+
+.howToWin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1242px;
+  margin: 0 auto;
+  gap: 14px;
+  counter-reset: howToWin;
+}
+.howToWin li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 18px;
+  text-align: center;
+  counter-increment: howToWin;
+}
+.howToWin li:before {
+  content: counter(howToWin);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 0px;
+  top: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: var(--red);
+  color: var(--white);
+  font-family: var(--title);
+  font-size: 36px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  line-height: 50px;
+  z-index: 2;
+}
+.howToWin li .button {
+  margin-top: 10px;
+}
+
+.howToWin__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  z-index: 1;
+}
+.howToWin__image:before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+}
+.howToWin__image img {
+  position: absolute;
+  width: 166.666666%;
+}
+
+.howToWin__title,
+.howToWin__text {
+  display: block;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.howToWin__title {
+  font-family: var(--font);
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.howToWin__text {
+  max-width: 240px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.section--game {
+  height: 100vh;
+  background: url("../img/sea.gif") no-repeat center center/cover;
 }
 
 .body.locked {
