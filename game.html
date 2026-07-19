@@ -11,36 +11,74 @@
     <title>Galbani - Продукция</title>
   </head>
   <body>
-    <div class="body">
-      <!--PRELOADER-->
-      <div class="preloader" data-preloader>
-        <div class="preloader-center">
-          <img src="./assets/img/svg/preloader.svg" alt="Galbani" />
-        </div>
+    <!--PRELOADER-->
+    <div class="preloader" data-preloader>
+      <div class="preloader-center">
+        <img src="./assets/img/svg/preloader.svg" alt="Galbani" />
       </div>
+    </div>
 
+    <div class="body locked">
       <main class="main">
-        <!--SECTION PRODUCTS-->
         <section class="section section--game no-padding">
-          <a href="../" class="go-back"><span>Назад</span></a>
+          <button type="button" class="go-back" data-popup-open="go-back"><span>Назад</span></button>
           <div class="game-timer"><span>99</span></div>
 
-          <div class="game-wrapper">ssss</div>
+          <div class="game-wrapper"></div>
         </section>
       </main>
     </div>
 
     <!--POPUPS-->
-    <div class="backdrop" data-backdrop>
-      <div class="popup" data-popup>
-        <!--AUTH POPUP-->
-        <div class="popup-content" id="cheque">
-          <button class="popup-close" data-popup-close></button>
-          CHEQUE POPUP
+    <div class="backdrop backdrop--game" data-backdrop>
+      <div class="popup popup--game" data-popup>
+        <!--GAME INTRO POPUP-->
+        <div class="popup-content popup-game" id="game-intro">
+          <div class="popup-game-logo">
+            <img src="./assets/img/svg/logo.svg" alt="Galbani" />
+          </div>
+          <div class="popup-game-text">
+            <h2 class="title title--80 white">Интерактивный пазл</h2>
+            <p class="subtitle">
+              Успейте собрать карту Италии из&nbsp;20 регионов за&nbsp;99 секунд — и&nbsp;получите специальный приз: Брендированную разделочную доску
+            </p>
+            <button type="button" class="button big light" data-popup-close data-game-open><span>Играть</span></button>
+          </div>
+        </div>
+
+        <!--GAME WIN POPUP-->
+        <div class="popup-content popup-game" id="game-win">
+          <div class="popup-game-logo">
+            <img src="./assets/img/svg/logo.svg" alt="Galbani" />
+          </div>
+          <div class="popup-game-text">
+            <h2 class="title title--80 white">Поздравляем с&nbsp;победой!</h2>
+            <p class="subtitle">
+              Вы собрали все 20&nbsp;регионов Италии за&nbsp;99 секунд и&nbsp;выиграли брендированную разделочную доску. <b>Buon appetito!</b>
+            </p>
+            <button type="button" class="button big light" data-popup-close><span>Закрыть</span></button>
+          </div>
+        </div>
+
+        <!--GO BACK POPUP-->
+        <div class="popup-content popup-game" id="go-back">
+          <div class="popup-game-text">
+            <h2 class="title title--80 white">Вы уверены, что хотите <br />закончить игру?</h2>
+            <div class="buttons">
+              <a href="./#game" class="button big glass"><span>Закончить</span></a>
+              <button type="button" class="button big light" data-popup-close><span>Продолжить</span></button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <script src="./assets/js/scripts.js" type="module" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        //window.popup.open('game-intro');
+        window.popup.open('game-win');
+      });
+    </script>
   </body>
 </html>

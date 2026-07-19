@@ -12,6 +12,7 @@
   display: flex;
   position: relative;
   width: 100%;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 12px;
@@ -111,6 +112,31 @@
     }
     @media (hover: hover) {
       &:hover {
+        &:before {
+          transform: translate(0%, 0%);
+        }
+      }
+    }
+  }
+
+  &.glass {
+    background-color: rgba(158, 209, 234, 0.502);
+    span {
+      transition: color 0.3s var(--cubic);
+      color: var(--white);
+    }
+    &:before {
+      background: var(--white);
+      transform: translate(-101%, 0%);
+      animation: none;
+      transition: transform 0.5s;
+      border-radius: 40px;
+    }
+    @media (hover: hover) {
+      &:hover {
+        span {
+          color: var(--blue);
+        }
         &:before {
           transform: translate(0%, 0%);
         }
