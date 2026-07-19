@@ -7,9 +7,10 @@
     <meta name="theme-color" content="#1e2d68" />
     <meta name="description" content="Galbani - Выиграйте путешествие на двоих в Италию" />
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
-    <!-- <link rel="stylesheet" type="text/css" href="./assets/css/choices.min.css" />
+    <!-- 
     
     <link rel="stylesheet" type="text/css" href="./assets/css/dropzone.min.css" /> -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/choices.min.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/styles.min.css?v=1.1" />
     <title>Galbani - Выиграйте путешествие на двоих в Италию</title>
@@ -303,13 +304,123 @@
           <section class="section" id="winners">
             <div class="container">
               <h2 class="title title--80">Победители</h2>
+              <div class="winners">
+                <!--filters-->
+                <div class="winners-filters">
+                  <script>
+                    const onSearchFormSubmit = e => {
+                      e.preventDefault();
+                      alert('Поиск по телефону');
+                      e.target.reset();
+                    };
+                  </script>
+
+                  <form action="#">
+                    <select data-select name="weeks">
+                      <option value="all">Все недели</option>
+                      <option value="16.05.2026 - 23.06.2026">16.05.2026 - 23.06.2026</option>
+                      <option value="16.05.2026 - 23.06.2026">17.05.2026 - 24.06.2026</option>
+                      <option value="16.05.2026 - 23.06.2026">19.05.2026 - 26.06.2026</option>
+                    </select>
+                  </form>
+
+                  <form action="#" class="form" novalidate onsubmit="onSearchFormSubmit(event)">
+                    <label class="label">
+                      <input type="tel" name="search" class="input" placeholder="Поиск по телефону" required />
+                    </label>
+                    <button type="submit" class="search-submit">Поиск</button>
+                  </form>
+                </div>
+
+                <!--table-->
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Дата<span> розыгрыша</span></th>
+                      <th>Имя<span> участника</span></th>
+                      <th>Телефон</th>
+                      <th><span>Наименование</span> приз<span>а</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>26.09.2025</td>
+                      <td>Маргарита</td>
+                      <td>+7035*****11</td>
+                      <td>Сертификат Левел Тревел на 10&nbsp;000 рублей</td>
+                    </tr>
+                    <tr>
+                      <td>26.09.2025</td>
+                      <td>Аркадий</td>
+                      <td>+7959*****12</td>
+                      <td>Набор кухонных принадлежностей для&nbsp;гриля</td>
+                    </tr>
+                    <tr>
+                      <td>26.09.2025</td>
+                      <td>Пантелеймон</td>
+                      <td>+7036*****11</td>
+                      <td>Сертификат ОЗОН на&nbsp;3000&nbsp;рублей</td>
+                    </tr>
+                    <tr>
+                      <td>26.09.2025</td>
+                      <td>Иван</td>
+                      <td>+7036*****11</td>
+                      <td>Беспроводные наушники Apple</td>
+                    </tr>
+                    <tr>
+                      <td>26.09.2025</td>
+                      <td>Иван</td>
+                      <td>+7036*****11</td>
+                      <td>Угольный гриль SnS&nbsp;Kettle Black&nbsp;Edition</td>
+                    </tr>
+                    <tr>
+                      <td>26.09.2025</td>
+                      <td>Иван</td>
+                      <td>+7036*****11</td>
+                      <td>Промокод на подписку ИВИ годовая</td>
+                    </tr>
+                    <tr>
+                      <td>26.09.2025</td>
+                      <td>Иван</td>
+                      <td>+7036*****11</td>
+                      <td>Промокод на&nbsp;скидку 10%&nbsp;Траектории</td>
+                    </tr>
+                    <tr>
+                      <td>26.09.2025</td>
+                      <td>Иван</td>
+                      <td>+7036*****11</td>
+                      <td>Белкакар 200 рублей</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <!--pagination-->
+                <ul class="pagination">
+                  <li>
+                    <button href="#" class="pagination-btn prev" disabled>
+                      <img src="./assets/img/svg/prev.svg" alt="" />
+                    </button>
+                  </li>
+                  <li><a href="#" class="pagination-btn active">1</a></li>
+                  <li><a href="#" class="pagination-btn">2</a></li>
+                  <li><a href="#" class="pagination-btn">3</a></li>
+                  <li><a href="#" class="pagination-btn">4</a></li>
+                  <li><a href="#" class="pagination-btn">5</a></li>
+                  <li><a href="#" class="pagination-btn">6</a></li>
+                  <li>
+                    <button class="pagination-btn next">
+                      <img src="./assets/img/svg/next.svg" alt="" />
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </section>
 
           <!--SECTION FAQ-->
           <section class="section section--faq" id="faq">
             <div class="container">
-              SECTION FAQ
+              <h2 class="title title--80 white">Вопрос-ответ</h2>
               <button type="button" class="button red"><span>Задать вопрос</span></button>
             </div>
           </section>
@@ -346,10 +457,12 @@
       </div>
     </div>
 
-    <!-- <script src="./assets/js/plugins/iMask.js"></script>
-    <script src="./assets/js/plugins/choices.min.js"></script>
+    <!-- 
+    
     
     <script src="./assets/js/plugins/dropzone.min.js"></script> -->
+    <script src="./assets/js/plugins/iMask.js"></script>
+    <script src="./assets/js/plugins/choices.min.js"></script>
     <script src="./assets/js/plugins/swiper-bundle.min.js"></script>
     <script src="./assets/js/scripts.js" type="module" defer></script>
   </body>
