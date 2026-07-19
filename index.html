@@ -43,7 +43,7 @@
               <a href="./products.html" class="menu__link"><span>Продукты</span></a>
             </li>
             <li>
-              <a href="./game.html" class="menu__link"><span>Игра</span></a>
+              <a href="./#game" class="menu__link"><span>Игра</span></a>
             </li>
             <li>
               <a href="./#winners" class="menu__link"><span>Победители</span></a>
@@ -126,8 +126,8 @@
         <!--SECTION ABOUT-->
         <section class="section section--about" id="about">
           <div class="container">
-            <h2 class="about-title"><span>Главный приз</span></h2>
             <div class="about-slider" data-slider data-effect="fade" data-allow-touch-move="false" data-autoplay="3000" data-speed="1000">
+              <h2 class="about-title"><span>Главный приз</span></h2>
               <div class="swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -158,31 +158,159 @@
           </div>
         </section>
 
-        <!--SECTION PRIZES-->
-        <section class="section section--prizes" id="prizes">
-          <div class="container">SECTION PRIZES</div>
-        </section>
+        <div class="sticky-background-wrapper">
+          <div data-sticky-background class="sticky-background"></div>
 
-        <!--SECTION GAME-->
-        <section class="section section--game" id="game">
-          <div class="container">
-            SECTION GAME <button type="button" class="button big" data-popup-open="cheque"><span>Зарегистрировать чек</span></button>
-            <button type="button" class="button big light" data-popup-open="cheque"><span>Зарегистрировать чек</span></button>
-          </div>
-        </section>
+          <!--SECTION PRIZES-->
+          <section class="section section--prizes" id="prizes">
+            <div class="container">
+              <h2 class="title title--80 white">Еженедельные призы</h2>
+              <div class="prizes" data-slider data-slides-per-view="3,3,1" data-space-between="10,10,10">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <!--1-->
+                    <div class="swiper-slide">
+                      <div class="prize">
+                        <div class="prize__image">
+                          <img src="./assets/img/prizes/hoff.webp" alt="Galbani" width="300" />
+                        </div>
+                        <p class="prize__text">Сертификат Hoff <br />3&nbsp;500&nbsp;₽</p>
+                      </div>
+                    </div>
+                    <!--2-->
+                    <div class="swiper-slide">
+                      <div class="prize">
+                        <div class="prize__image">
+                          <img src="./assets/img/prizes/mvideo.webp" alt="Galbani" width="300" />
+                        </div>
+                        <p class="prize__text">Сертификат М.видео <br />3&nbsp;500&nbsp;₽</p>
+                      </div>
+                    </div>
+                    <!--3-->
+                    <div class="swiper-slide">
+                      <div class="prize">
+                        <div class="prize__image">
+                          <img src="./assets/img/prizes/okko.webp" alt="Galbani" width="300" />
+                        </div>
+                        <p class="prize__text">Сертификат на&nbsp;онлайн <br />кинотеатр 2&nbsp;000&nbsp;₽</p>
+                      </div>
+                    </div>
+                    <!--4-->
+                    <div class="swiper-slide">
+                      <div class="prize">
+                        <div class="prize__image">
+                          <img src="./assets/img/prizes/shopper-bag.webp" alt="Galbani" width="300" />
+                        </div>
+                        <p class="prize__text">Летняя сумка-шоппер</p>
+                      </div>
+                    </div>
+                    <!--5-->
+                    <div class="swiper-slide">
+                      <div class="prize">
+                        <div class="prize__image">
+                          <img src="./assets/img/prizes/plates.webp" alt="Galbani" width="300" />
+                        </div>
+                        <p class="prize__text">Набор брендированных <br />тарелок</p>
+                      </div>
+                    </div>
+                    <!--6-->
+                    <div class="swiper-slide">
+                      <div class="prize">
+                        <div class="prize__image">
+                          <img src="./assets/img/prizes/fartuh.webp" alt="Galbani" width="300" />
+                        </div>
+                        <p class="prize__text">Брендированный фартук</p>
+                      </div>
+                    </div>
+                    <!--7-->
+                    <div class="swiper-slide">
+                      <div class="prize">
+                        <div class="prize__image">
+                          <img src="./assets/img/prizes/pled.webp" alt="Galbani" width="300" />
+                        </div>
+                        <p class="prize__text">Плед для&nbsp;пикника</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="arrow" data-arrow-prev></button>
+                  <button class="arrow" data-arrow-next></button>
+                </div>
+              </div>
+            </div>
+          </section>
 
-        <!--SECTION WINNERS-->
-        <section class="section section--winners" id="winners">
-          <div class="container">SECTION WINNERS</div>
-        </section>
+          <!--SECTION PRIZES-->
+          <section class="section section--prizes" id="prizes-garanty">
+            <div class="container">
+              <h2 class="title title--80 white">Гарантированные призы</h2>
+              <div class="prizes" data-slider data-slides-per-view="3,3,1" data-space-between="10,10,10">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <!--1-->
+                    <div class="swiper-slide">
+                      <div class="prize">
+                        <div class="prize__image">
+                          <img src="./assets/img/prizes/phone.webp" alt="Galbani" width="300" />
+                        </div>
+                        <p class="prize__text">100&nbsp;₽ на&nbsp;телефон</p>
+                      </div>
+                    </div>
+                    <!--2-->
+                    <div class="swiper-slide">
+                      <div class="prize">
+                        <div class="prize__image">
+                          <img src="./assets/img/prizes/yandex-afisha.webp" alt="Galbani" width="300" />
+                        </div>
+                        <p class="prize__text">Сертификат Яндекс Афиша <br />на&nbsp;100&nbsp;₽</p>
+                      </div>
+                    </div>
+                    <!--3-->
+                    <div class="swiper-slide">
+                      <div class="prize">
+                        <div class="prize__image">
+                          <img src="./assets/img/prizes/yandex-market.webp" alt="Galbani" width="300" />
+                        </div>
+                        <p class="prize__text">Сертфиикат Яндекс Маркет <br />на&nbsp;100&nbsp;₽</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="arrow" data-arrow-prev></button>
+                  <button class="arrow" data-arrow-next></button>
+                </div>
+              </div>
+              <p class="subtitle">Можно выбрать любые и&nbsp;получить до&nbsp;5&nbsp;гарантированных призов</p>
+              <button type="button" class="button big" data-popup-open="cheque"><span>Зарегистрировать чек</span></button>
+            </div>
+          </section>
 
-        <!--SECTION FAQ-->
-        <section class="section section--faq" id="faq">
-          <div class="container">
-            SECTION FAQ
-            <button type="button" class="button red"><span>Задать вопрос</span></button>
-          </div>
-        </section>
+          <!--SECTION GAME-->
+          <section class="section section--game" id="game">
+            <div class="container">
+              <h2 class="title title--80">Интерактивный пазл</h2>
+              <p class="subtitle">Поможет научиться наслаждаться по-итальянски вместе со&nbsp;всей Италией!</p>
+              <div class="game-prize-info">
+                <img src="./assets/img/game/plate.webp" alt="Galbani" width="150" />
+                <div class="info">
+                  <p>выиграйте специальный приз — брендированную разделочную доску</p>
+                  <a href="./game.html" class="button big light"><span>Сыграть в игру</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!--SECTION WINNERS-->
+          <section class="section section--winners" id="winners">
+            <div class="container">SECTION WINNERS</div>
+          </section>
+
+          <!--SECTION FAQ-->
+          <section class="section section--faq" id="faq">
+            <div class="container">
+              SECTION FAQ
+              <button type="button" class="button red"><span>Задать вопрос</span></button>
+            </div>
+          </section>
+        </div>
       </main>
 
       <!--FOOTER-->
