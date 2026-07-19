@@ -222,7 +222,7 @@ button:disabled {
 }
 .preloader.hidden .preloader-center {
   width: 400px;
-  height: 400px;
+  height: 370px;
 }
 @media (max-width: 1439px) {
   .preloader.hidden .preloader-center {
@@ -261,18 +261,18 @@ button:disabled {
       align-content: flex-end;
   position: relative;
   width: 560px;
-  height: 560px;
+  height: 518px;
 }
 @media (max-width: 1439px) {
   .preloader-center {
     width: 400px;
-    height: 400px;
+    height: 370px;
   }
 }
 @media (max-width: 1279px) {
   .preloader-center {
     width: 260px;
-    height: 260px;
+    height: 242px;
   }
 }
 .preloader-center {
@@ -1552,6 +1552,65 @@ button:disabled {
   overflow: hidden;
   width: 100%;
   height: 0px;
+}
+
+.section--hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  background: url("../img/hero/bg.webp") no-repeat center center/cover;
+  margin-top: -60px;
+  padding-top: 60px;
+}
+@media (max-width: 767px) {
+  .section--hero {
+    margin-top: -50px;
+    padding-top: 50px;
+  }
+}
+
+.hero-content {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1e2d68), to(#294b92));
+  background: linear-gradient(#1e2d68, #294b92);
+  color: var(--white);
+  margin-top: auto;
+  display: block;
+  width: 100%;
+  padding: 20px 0px;
+}
+
+.hero-text {
+  display: inline-block;
+  text-align: center;
+}
+.hero-text strong {
+  font-size: 110px;
+  line-height: 1;
+}
+.hero-text span {
+  font-family: var(--font);
+  font-size: 38px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--bg-blue);
+}
+.hero-text span b {
+  font-family: var(--title);
+  font-weight: 400;
+  font-size: 48px;
+  line-height: inherit;
+  color: var(--white);
+}
+
+.hero-image {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 478px;
+  -webkit-transform: translate(12.8%, 0%);
+      -ms-transform: translate(12.8%, 0%);
+          transform: translate(12.8%, 0%);
 }
 
 .body.locked {

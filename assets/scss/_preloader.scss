@@ -35,7 +35,7 @@
     }
     .preloader-center {
       width: 400px;
-      height: 400px;
+      height: 370px;
       @media (max-width: 1439px) {
         width: 320px;
         height: 320px;
@@ -62,14 +62,14 @@
   align-content: flex-end;
   position: relative;
   width: 560px;
-  height: 560px;
+  height: 518px;
   @media (max-width: 1439px) {
     width: 400px;
-    height: 400px;
+    height: 370px;
   }
   @media (max-width: 1279px) {
     width: 260px;
-    height: 260px;
+    height: 242px;
   }
   left: 50%;
   top: 50%;
