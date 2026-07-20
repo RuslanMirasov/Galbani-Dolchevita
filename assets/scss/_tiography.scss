@@ -18,12 +18,12 @@
   }
 
   &.title--80 {
-    font-size: myclamp(40px, 80px, 1440px, 1440px);
+    font-size: 80px;
   }
 }
 
 .subtitle {
-  font-size: myclamp(20px, 24px, 1440px, 1440px);
+  font-size: 24px;
   line-height: 1.3;
   font-weight: 400;
   &.ta--c {

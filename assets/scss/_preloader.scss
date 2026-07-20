@@ -44,14 +44,16 @@
         width: 100px;
         height: 100px;
       }
-      left: 0%;
       top: 0%;
-      transform: translate(0%, 0%);
+      transform: translate(-50%, -100%);
     }
-  }
-
-  &.absolute {
-    position: absolute;
+    &.main-preloader {
+      .preloader-center {
+        left: 0%;
+        top: 0%;
+        transform: translate(0%, 0%);
+      }
+    }
   }
 }
 

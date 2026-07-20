@@ -239,14 +239,17 @@ button:disabled {
   }
 }
 .preloader.hidden .preloader-center {
+  top: 0%;
+  -webkit-transform: translate(-50%, -100%);
+      -ms-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+.preloader.hidden.main-preloader .preloader-center {
   left: 0%;
   top: 0%;
   -webkit-transform: translate(0%, 0%);
       -ms-transform: translate(0%, 0%);
           transform: translate(0%, 0%);
-}
-.preloader.absolute {
-  position: absolute;
 }
 
 .preloader-center {
@@ -355,11 +358,11 @@ button:disabled {
   text-transform: uppercase;
 }
 .title.title--80 {
-  font-size: clamp(40px, 5.5556vw, 80px);
+  font-size: 80px;
 }
 
 .subtitle {
-  font-size: clamp(20px, 1.6667vw, 24px);
+  font-size: 24px;
   line-height: 1.3;
   font-weight: 400;
 }
