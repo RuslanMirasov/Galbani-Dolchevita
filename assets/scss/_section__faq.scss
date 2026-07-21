@@ -84,12 +84,12 @@
     list-style: disc;
     display: block;
     margin: -4px 0px;
-    color: var(--green);
+    color: var(--blue);
     padding-left: 1.3em;
     li {
       padding: 2px 0px;
       > * {
-        color: var(--black);
+        color: var(--blue);
       }
     }
   }
@@ -119,9 +119,10 @@
     display: block;
     position: relative;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 12px;
     font-size: 16px;
-    font-weight: 400;
+    line-height: 1.2;
+    font-weight: 500;
   }
 
   .form {
@@ -147,17 +148,15 @@
       margin-top: 14px;
       margin-bottom: 14px;
       .label__text {
-        font-weight: 400;
+        font-weight: 500;
       }
       a {
-        color: var(--red);
+        text-decoration: underline;
+        transition: color 0.3s var(--cubic);
+        &:hover {
+          color: var(--bg-blue);
+        }
       }
-    }
-
-    .button {
-      margin: 0 auto;
-      min-width: 198px;
-      color: var(--white);
     }
 
     .radio + .label__text,
