@@ -163,7 +163,7 @@
           <div data-sticky-background class="sticky-background"></div>
 
           <!--SECTION PRIZES-->
-          <section class="section section--prizes" id="prizes">
+          <section class="section section--prizes first-in-scroll-area" id="prizes">
             <div class="container">
               <h2 class="title title--80 white">Еженедельные призы</h2>
               <div class="prizes" data-slider data-slides-per-view="3,3,1" data-space-between="10,10,10">
@@ -423,7 +423,142 @@
           <section class="section section--faq" id="faq">
             <div class="container">
               <h2 class="title title--80 white">Вопрос-ответ</h2>
-              <button type="button" class="button red"><span>Задать вопрос</span></button>
+
+              <div class="faq">
+                <div class="faq__list">
+                  <div data-accordeon>
+                    <div class="question" data-accordeon-header><p>Какая продукция Мираторг участвует в акции “Гриль&#8209;охота”?</p></div>
+                    <div data-accordeon-body>
+                      <div class="answer">
+                        <p>
+                          Ознакомиться со&nbsp;списком товаров, покупка которых учитывается в&nbsp;акции, можно <br />на странице
+                          <a href="./products.html">"Продукты, участвующие в&nbsp;акции"</a>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-accordeon>
+                    <div class="question" data-accordeon-header><p>Как определяются победители розыгрышей?</p></div>
+                    <div data-accordeon-body>
+                      <div class="answer">
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium cumque odit facilis aliquid culpa delectus tempora
+                          praesentium unde maiores corporis animi placeat quos obcaecati officiis, architecto quasi omnis tempore est.
+                        </p>
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium cumque odit facilis aliquid culpa delectus tempora
+                          praesentium unde maiores corporis animi placeat quos obcaecati officiis, architecto quasi omnis tempore est.
+                        </p>
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium cumque odit facilis aliquid culpa delectus tempora
+                          praesentium unde maiores corporis animi placeat quos obcaecati officiis, architecto quasi omnis tempore est.
+                        </p>
+                        <ul>
+                          <li><p>Lorem, ipsum dolor sit amet consectetur</p></li>
+                          <li>
+                            <p>
+                              Ipsum dolor sit amet consectetur Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium cumque odit
+                              facilis aliquid culpa delectus tempora praesentium unde maiores corporis animi placeat quos obcaecati officiis
+                            </p>
+                          </li>
+                          <li><p>Amet consectetur</p></li>
+                        </ul>
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium cumque odit facilis aliquid culpa delectus tempora
+                          praesentium unde maiores corporis animi placeat quos obcaecati officiis, architecto quasi omnis tempore est.
+                        </p>
+                        <h2>Some title</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur tempore est.</p>
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium cumque odit facilis aliquid culpa delectus tempora
+                          praesentium unde maiores corporis animi placeat quos obcaecati officiis, architecto quasi omnis tempore est.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-accordeon>
+                    <div class="question" data-accordeon-header><p>Какие сроки проведения акции?</p></div>
+                    <div data-accordeon-body>
+                      <div class="answer">
+                        <p>????????</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-accordeon>
+                    <div class="question" data-accordeon-header><p>Какие призы я могу выиграть?</p></div>
+                    <div data-accordeon-body>
+                      <div class="answer">
+                        <p>????????</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-accordeon>
+                    <div class="question" data-accordeon-header><p>За что можно получить стрелы?</p></div>
+                    <div data-accordeon-body>
+                      <div class="answer">
+                        <p>????????</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-accordeon>
+                    <div class="question" data-accordeon-header><p>Как я смогу получить призы?</p></div>
+                    <div data-accordeon-body>
+                      <div class="answer">
+                        <p>????????</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-accordeon>
+                    <div class="question" data-accordeon-header><p>Где я смогу получить призы?</p></div>
+                    <div data-accordeon-body>
+                      <div class="answer">
+                        <p>????????</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq__sidebar">
+                  <h2 class="title title--32 white">Остались вопросы?</h2>
+                  <p>Напишите нам через форму обратной связи</p>
+                  <script>
+                    function onFaqFormSubmit(e) {
+                      e.preventDefault();
+                      alert('Отправка формы FAQ');
+                    }
+                  </script>
+                  <form action="#" class="form" novalidate onsubmit="onFaqFormSubmit(event)">
+                    <label class="label">
+                      <input type="text" name="name" class="input" required placeholder="&nbsp;" />
+                      <p class="placeholder">Имя</p>
+                    </label>
+                    <label class="label">
+                      <input type="email" name="email" class="input" required placeholder="&nbsp;" />
+                      <p class="placeholder">Email</p>
+                    </label>
+                    <label class="label">
+                      <textarea name="message" class="input textarea" required placeholder="&nbsp;"></textarea>
+                      <p class="placeholder">Текст сообщения</p>
+                    </label>
+
+                    <fieldset>
+                      <label class="label">
+                        <input type="checkbox" name="confirmation" class="checkbox" required />
+                        <p class="label__text">
+                          <span>Я соглашаюсь с <a href="#">Правилами</a> и&nbsp;<a href="#">Политикой конфиденциальности</a></span>
+                        </p>
+                      </label>
+                      <label class="label">
+                        <input class="checkbox" required type="checkbox" name="confirmation2" />
+                        <p class="label__text">
+                          <span>Я соглашаюсь с <a href="#">Политикой в&nbsp;отношении обработки персональных данных</a></span>
+                        </p>
+                      </label>
+                    </fieldset>
+
+                    <button type="submit" class="button red full"><span>Задать вопрос</span></button>
+                  </form>
+                </div>
+              </div>
             </div>
           </section>
         </div>

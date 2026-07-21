@@ -1,0 +1,260 @@
+.section--faq {
+  padding-top: 50px;
+}
+
+.faq {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 30px 50px 0px 50px;
+
+  .active {
+    .question {
+      border-radius: 20px 20px 0px 0px;
+    }
+  }
+
+  .white {
+    color: var(--white);
+  }
+
+  .red {
+    color: var(--red);
+  }
+}
+
+.faq__list {
+  display: flex;
+  flex: 1;
+  gap: 2px;
+  flex-direction: column;
+}
+
+.question {
+  position: relative;
+  background: var(--light-blue);
+  border-radius: 20px;
+  padding: 16px 50px 16px 20px;
+  color: var(--blue);
+  transition: 0.5s border-radius ease 0s;
+  p {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+}
+
+.answer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  gap: 14px;
+  padding: 16px 20px;
+  background: var(--white);
+  color: var(--blue);
+  margin-top: 2px;
+  border-radius: 0px 0px 20px 20px;
+
+  p {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    display: block;
+    margin-top: 4px;
+    margin-bottom: -8px;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  b,
+  strong {
+    font-weight: 500;
+  }
+  ul {
+    list-style: disc;
+    display: block;
+    margin: -4px 0px;
+    color: var(--green);
+    padding-left: 1.3em;
+    li {
+      padding: 2px 0px;
+      > * {
+        color: var(--black);
+      }
+    }
+  }
+  a {
+    font-weight: 500;
+    @media (hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.faq__sidebar {
+  display: block;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  max-width: 436px;
+  flex-shrink: 0;
+  padding: 32px;
+  background: linear-gradient(#1e2d68, #294b92);
+  color: var(--white);
+  border-radius: 20px;
+
+  > p {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .form {
+    position: relative;
+    max-width: 372px;
+    margin-top: 24px;
+    margin-bottom: 5px;
+    gap: 10px;
+    .input {
+      height: 46px;
+      border-radius: 12px;
+      padding: 0px 16px;
+      &.textarea {
+        height: 70px;
+        padding-top: 12px;
+        + .placeholder {
+          height: 46px;
+        }
+      }
+    }
+
+    fieldset {
+      margin-top: 14px;
+      margin-bottom: 14px;
+      .label__text {
+        font-weight: 400;
+      }
+      a {
+        color: var(--red);
+      }
+    }
+
+    .button {
+      margin: 0 auto;
+      min-width: 198px;
+      color: var(--white);
+    }
+
+    .radio + .label__text,
+    .checkbox + .label__text {
+      span {
+        font-size: 14px;
+      }
+
+      &:before {
+        width: 24px;
+        height: 24px;
+        top: 0px;
+        transform: translate(0px, 0px);
+      }
+    }
+  }
+}
+
+.accordeon.active {
+  .faq__sidebar {
+    transition: top 0s linear 0.5s;
+    top: 80px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .faq {
+    width: calc(100% - 60px);
+    gap: 24px;
+    padding: 30px 0px 0px 0px;
+    margin: 0 auto;
+  }
+
+  .question {
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .answer {
+    br {
+      display: none;
+    }
+  }
+
+  .faq__sidebar {
+    max-width: 400px;
+    padding: 32px 26px;
+
+    > p {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .question {
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .faq__sidebar {
+    max-width: 360px;
+    padding: 32px;
+
+    > p {
+      max-width: 290px;
+      font-size: 16px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .faq {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .faq__sidebar {
+    max-width: 100%;
+    padding: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .faq {
+    width: 100%;
+    gap: 24px;
+    padding: 24px 0px 0px 0px;
+    margin: 0 auto;
+  }
+  .question {
+    padding: 16px 60px 16px 16px;
+  }
+  .answer {
+    padding: 14px 16px;
+  }
+}

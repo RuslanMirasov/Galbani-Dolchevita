@@ -13,7 +13,7 @@
   --red: #c10016;
   --red-hover: #d6132a;
   --green: #005e5d;
-  --invalid: #ffe26b;
+  --invalid: #ff0000;
 
   --cubic: ease;
 }
@@ -36,6 +36,9 @@
 @import 'section__prizes';
 @import 'section__game';
 @import 'section__winners';
+@import 'section__faq';
+@import 'section__products';
+@import 'section__profile';
 @import 'popup';
 @import 'dropzone';
 @import 'footer';

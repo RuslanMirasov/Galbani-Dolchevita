@@ -3,6 +3,10 @@
   width: 100%;
   position: relative;
   z-index: 0;
+
+  &.to-top {
+    margin-top: -60px;
+  }
 }
 
 .sticky-background {
@@ -17,7 +21,7 @@
   pointer-events: none;
 }
 
-#prizes {
+.first-in-scroll-area {
   margin-top: -100svh;
 }
 
