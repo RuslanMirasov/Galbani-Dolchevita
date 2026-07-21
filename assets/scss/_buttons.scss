@@ -72,6 +72,14 @@
     }
   }
 
+  &.medium {
+    height: 54px;
+    padding: 0px 40px;
+    span {
+      font-size: 26px;
+    }
+  }
+
   &.small {
     height: 28px;
     padding: 0px 24px;
