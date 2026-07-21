@@ -96,3 +96,58 @@
     margin-top: 10px;
   }
 }
+
+.my-cheque {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 32px;
+  background: var(--white);
+  max-width: 1020px;
+  margin: 100px auto 0px auto;
+  padding: 40px 60px;
+  border-radius: 32px;
+}
+
+.my-cheque-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  text-transform: uppercase;
+  color: var(--blue);
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  table-layout: fixed;
+
+  thead {
+    font-weight: 700;
+    font-size: 20px;
+    min-height: 80px;
+  }
+
+  th,
+  td {
+    height: 80px;
+    padding: 0px 20px;
+    &:first-child {
+      width: 43%;
+      padding-left: 50px;
+    }
+    &:last-child {
+      width: 200px;
+      padding-right: 50px;
+    }
+  }
+
+  th {
+    border-bottom: 3px solid var(--bg-blue);
+  }
+  td {
+    border-bottom: 1px solid var(--bg-blue);
+  }
+}

@@ -3105,6 +3105,70 @@ button:disabled {
   margin-top: 10px;
 }
 
+.my-cheque {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 32px;
+  background: var(--white);
+  max-width: 1020px;
+  margin: 100px auto 0px auto;
+  padding: 40px 60px;
+  border-radius: 32px;
+}
+
+.my-cheque-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  text-transform: uppercase;
+  color: var(--blue);
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  table-layout: fixed;
+}
+.my-cheque-table thead {
+  font-weight: 700;
+  font-size: 20px;
+  min-height: 80px;
+}
+.my-cheque-table th,
+.my-cheque-table td {
+  height: 80px;
+  padding: 0px 20px;
+}
+.my-cheque-table th:first-child,
+.my-cheque-table td:first-child {
+  width: 43%;
+  padding-left: 50px;
+}
+.my-cheque-table th:last-child,
+.my-cheque-table td:last-child {
+  width: 200px;
+  padding-right: 50px;
+}
+.my-cheque-table th {
+  border-bottom: 3px solid var(--bg-blue);
+}
+.my-cheque-table td {
+  border-bottom: 1px solid var(--bg-blue);
+}
+
 .body.locked {
   overflow-x: hidden;
   overflow-y: hidden;
