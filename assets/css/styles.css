@@ -11,6 +11,7 @@
   --blue-hover: #0a499e;
   --red: #c10016;
   --red-hover: #d6132a;
+  --green: #005e5d;
   --invalid: #ffe26b;
   --cubic: ease;
 }
@@ -348,6 +349,9 @@ button:disabled {
 .title.red {
   color: var(--red);
 }
+.title.blue {
+  color: var(--blue);
+}
 .title.white {
   color: var(--white);
 }
@@ -373,17 +377,17 @@ button:disabled {
 :root {
   --input-font-family: var(--font);
   --input-font-size: 14px;
-  --input-font-weight: 400;
+  --input-font-weight: 500;
   --input-text-transform: auto;
   --input-height: 36px;
   --input-padding: 0px 14px;
   --input-background: var(--white);
   --input-border: 2px solid var(--white);
   --input-border-radius: 5px;
-  --input-color: var(--black);
-  --input-placeholder-color: var(--black);
+  --input-color: var(--blue);
+  --input-placeholder-color: var(--blue);
   --input-placeholder-opacity: 0.6;
-  --invalid-border: 2px solid var(--yellow);
+  --invalid-border: 2px solid var(--invalid);
   --invalid-color: var(--invalid);
   --form-gap: 14px;
 }
@@ -543,7 +547,7 @@ button:disabled {
 }
 .input.invalid {
   border: var(--invalid-border);
-  color: var(--red);
+  color: var(--invalid-color);
 }
 .input:not(:-moz-placeholder) + .placeholder {
   transform: scale(0.7) translate(0px, -18px);
@@ -588,10 +592,10 @@ button:disabled {
   display: inline-block;
   position: relative;
   padding: 5px 14px;
-  color: var(--black);
+  color: var(--white);
   font-weight: 500;
   font-size: 11px;
-  background: var(--yellow);
+  background: var(--invalid);
   -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
   top: 0px;
@@ -2271,7 +2275,8 @@ button:disabled {
   width: 100%;
   min-width: 220px;
   height: 44px !important;
-  background: #eef2ec !important;
+  background: rgba(128, 213, 251, 0.9) !important;
+  backdrop-filter: blur(2px);
   margin: 0;
   z-index: 10;
   font-weight: 400;
@@ -2284,62 +2289,72 @@ button:disabled {
 }
 .winners-filters .choices__inner {
   font-weight: 400;
+  background: none !important;
+  font-weight: 500 !important;
 }
 .winners-filters .choices[data-type*=select-one]::after {
   right: 12px;
-  background: #eef2ec url("../img/svg/select-red.svg") no-repeat center center;
+  background: url("../img/svg/select-red.svg") no-repeat center center;
 }
 .winners-filters .choices__list.choices__list--single {
-  background: #eef2ec !important;
+  background: none !important;
   padding: 0px 0px 0px 16px !important;
 }
 .winners-filters .choices__list.choices__list--single > .choices__item {
   height: 44px;
   text-wrap: nowrap;
+  color: rgba(1, 45, 104, 0.6) !important;
 }
 .winners-filters .choices__list--dropdown {
   left: 0px;
   width: 100% !important;
   border-radius: 0px 0px 22px 22px !important;
-  font-weight: 400 !important;
-  background: #eef2ec !important;
+  background: rgba(128, 213, 251, 0.9) !important;
+  font-weight: 500 !important;
 }
 .winners-filters .choices__list--dropdown .choices__item {
-  background: #eef2ec;
+  background: none;
+  backdrop-filter: blur(2px);
   opacity: 1;
+  color: rgba(1, 45, 104, 0.6) !important;
+}
+.winners-filters .choices__list--dropdown .choices__item.is-selected {
+  background: rgba(255, 255, 255, 0.3) !important;
 }
 .winners-filters .choices__list--dropdown .choices__item.is-highlighted {
-  background: rgba(0, 0, 0, 0.1) !important;
+  background: rgba(255, 255, 255, 0.3) !important;
 }
 .winners-filters .form {
   margin: 0;
   max-width: 220px;
 }
 .winners-filters .form .input {
-  background: #eef2ec;
-  border: 2px solid #eef2ec;
+  background: rgba(128, 213, 251, 0.9);
+  border: 2px solid rgba(128, 213, 251, 0.9);
   height: 44px;
   border-radius: 44px;
   padding: 0px 50px 0px 16px;
+  backdrop-filter: blur(2px);
+  color: rgba(1, 45, 104, 0.6);
 }
 .winners-filters .form .input::-webkit-input-placeholder {
-  color: var(--black);
+  color: rgba(1, 45, 104, 0.6);
   opacity: 1;
 }
 .winners-filters .form .input::-moz-placeholder {
-  color: var(--black);
+  color: rgba(1, 45, 104, 0.6);
   opacity: 1;
 }
 .winners-filters .form .input:-ms-input-placeholder {
-  color: var(--black);
+  color: rgba(1, 45, 104, 0.6);
   opacity: 1;
 }
 .winners-filters .form .input::-ms-input-placeholder {
-  color: var(--black);
+  color: rgba(1, 45, 104, 0.6);
   opacity: 1;
 }
 .winners-filters .form .input::placeholder {
-  color: var(--black);
+  color: rgba(1, 45, 104, 0.6);
   opacity: 1;
 }
 .winners-filters .form .input:focus::-webkit-input-placeholder {
@@ -2361,7 +2376,7 @@ button:disabled {
   width: 40px;
   height: 40px;
   position: absolute;
-  background: #eef2ec url("../img/svg/search.svg") no-repeat center center;
+  background: url("../img/svg/search.svg") no-repeat center center;
   right: 8px;
   top: 2px;
   border-radius: 44px;
@@ -2378,28 +2393,36 @@ button:disabled {
   table-layout: fixed;
 }
 .table thead {
-  min-height: 60px;
-  border-radius: 60px;
+  min-height: 58px;
+  border-radius: 58px;
   color: var(--white);
   font-size: 18px;
   line-height: 1;
-  font-weight: 700;
   position: relative;
   overflow: hidden;
   z-index: 1;
 }
 .table thead tr {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(9.99%, rgba(255, 255, 255, 0)), color-stop(10%, var(--green)), color-stop(90%, var(--green)), color-stop(90%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 9.99%, var(--green) 10%, var(--green) 90%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(5%, rgba(255, 255, 255, 0)), color-stop(5%, var(--blue)), color-stop(50%, #3c6b99), color-stop(95%, var(--blue)), color-stop(95%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 5%, var(--blue) 5%, #3c6b99 50%, var(--blue) 95%, rgba(255, 255, 255, 0) 95%, rgba(255, 255, 255, 0) 100%);
 }
 .table thead th {
   text-wrap: nowrap;
-  background: var(--green);
+  color: var(--bg-blue);
+  font-weight: 500;
+}
+.table thead th:first-child {
+  background: -webkit-gradient(linear, left top, right top, from(var(--blue)), color-stop(var(--blue)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(90deg, var(--blue), var(--blue), rgba(0, 0, 0, 0));
+}
+.table thead th:last-child {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(var(--blue)), to(var(--blue)));
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0), var(--blue), var(--blue));
 }
 .table th,
 .table td {
   width: 22%;
-  height: 60px;
+  height: 58px;
 }
 .table th:first-child,
 .table td:first-child {
@@ -2416,8 +2439,8 @@ button:disabled {
   width: 28%;
 }
 .table tbody {
-  color: var(--black);
-  font-weight: 400;
+  color: var(--blue);
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.2;
 }
@@ -2425,10 +2448,10 @@ button:disabled {
   background: transparent;
 }
 .table tbody tr:nth-child(2n+2) td {
-  background: #eef2ec;
+  background: rgba(128, 213, 251, 0.9);
 }
 .table tbody tr td:first-child {
-  padding-left: 128px;
+  padding-left: 116px;
 }
 
 .pagination {
@@ -2494,31 +2517,31 @@ button:disabled {
       align-content: center;
   width: 100%;
   height: 100%;
-  background-color: #eef2ec;
+  background-color: var(--bg-blue);
   border-radius: 50px;
   line-height: 1;
-  color: var(--black);
-  font-weight: 400;
+  color: var(--blue);
+  font-weight: 500;
   font-size: 16px;
   -webkit-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s;
 }
 .pagination-btn.active {
-  background-color: var(--red);
+  background-color: var(--blue);
   color: var(--white);
 }
 @media (hover: hover) {
   .pagination-btn:hover {
-    background-color: var(--red);
+    background-color: var(--blue-hover);
     color: var(--white);
   }
 }
 .pagination-btn.prev, .pagination-btn.next {
-  background-color: var(--red);
+  background-color: var(--blue);
 }
 @media (hover: hover) {
   .pagination-btn.prev:hover, .pagination-btn.next:hover {
-    background-color: var(--black);
+    background-color: var(--blue-hover);
   }
 }
 .pagination-btn.prev:disabled, .pagination-btn.next:disabled {
