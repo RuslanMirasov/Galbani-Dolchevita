@@ -480,8 +480,8 @@ button:disabled {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  color: var(--black);
-  opacity: 0.6;
+  color: var(--blue);
+  opacity: 0.5;
   -webkit-transform: scale(1) translate(0px, 0px);
       -ms-transform: scale(1) translate(0px, 0px);
           transform: scale(1) translate(0px, 0px);
@@ -516,27 +516,32 @@ button:disabled {
   resize: none;
 }
 .input::-webkit-input-placeholder {
-  opacity: 0.7;
+  color: Var(--blue);
+  opacity: 0.5;
   -webkit-transition: opacity 0.3s ease 0s;
   transition: opacity 0.3s ease 0s;
 }
 .input::-moz-placeholder {
-  opacity: 0.7;
+  color: Var(--blue);
+  opacity: 0.5;
   -moz-transition: opacity 0.3s ease 0s;
   transition: opacity 0.3s ease 0s;
 }
 .input:-ms-input-placeholder {
-  opacity: 0.7;
+  color: Var(--blue);
+  opacity: 0.5;
   -ms-transition: opacity 0.3s ease 0s;
   transition: opacity 0.3s ease 0s;
 }
 .input::-ms-input-placeholder {
-  opacity: 0.7;
+  color: Var(--blue);
+  opacity: 0.5;
   -ms-transition: opacity 0.3s ease 0s;
   transition: opacity 0.3s ease 0s;
 }
 .input::placeholder {
-  opacity: 0.7;
+  color: Var(--blue);
+  opacity: 0.5;
   -webkit-transition: opacity 0.3s ease 0s;
   transition: opacity 0.3s ease 0s;
 }
@@ -563,16 +568,16 @@ button:disabled {
   color: var(--invalid-color);
 }
 .input:not(:-moz-placeholder) + .placeholder {
-  transform: scale(0.7) translate(0px, -18px);
+  transform: scale(0.7) translate(-1.5px, -18px);
 }
 .input:not(:-ms-input-placeholder) + .placeholder {
-  -ms-transform: scale(0.7) translate(0px, -18px);
-      transform: scale(0.7) translate(0px, -18px);
+  -ms-transform: scale(0.7) translate(-1.5px, -18px);
+      transform: scale(0.7) translate(-1.5px, -18px);
 }
 .input:focus + .placeholder, .input:not(:placeholder-shown) + .placeholder {
-  -webkit-transform: scale(0.7) translate(0px, -18px);
-      -ms-transform: scale(0.7) translate(0px, -18px);
-          transform: scale(0.7) translate(0px, -18px);
+  -webkit-transform: scale(0.7) translate(-1.5px, -18px);
+      -ms-transform: scale(0.7) translate(-1.5px, -18px);
+          transform: scale(0.7) translate(-1.5px, -18px);
 }
 
 .input:-webkit-autofill {
@@ -591,6 +596,7 @@ button:disabled {
   height: 0px;
   position: absolute;
   left: 0px;
+  top: calc(100% - 16px);
   text-align: left;
   overflow: hidden;
   -webkit-transition: 0.3s;
@@ -604,25 +610,28 @@ button:disabled {
 .inputError span {
   display: inline-block;
   position: relative;
-  padding: 5px 14px;
+  padding: 4px 10px 6px 10px;
   color: var(--white);
   font-weight: 500;
   font-size: 11px;
+  border-radius: 10px;
   background: var(--invalid);
   -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
   top: 0px;
   left: 0px;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 .inputError span:before {
   content: "";
+  display: block;
+  position: absolute;
   width: 8px;
   height: 8px;
   background: var(--invalid);
-  position: absolute;
-  left: 9px;
-  top: -3px;
+  border-radius: 0px;
+  left: 18px;
+  top: -4px;
   -webkit-transform: scaleX(1.5) rotate(45deg);
       -ms-transform: scaleX(1.5) rotate(45deg);
           transform: scaleX(1.5) rotate(45deg);
@@ -1856,6 +1865,7 @@ button:disabled {
 
 .prizes {
   display: block;
+  width: 100%;
   position: relative;
   margin-top: 40px;
   max-width: 1160px;
@@ -1912,11 +1922,18 @@ button:disabled {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  max-width: 300px;
+}
+.prize__image:before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 100%;
 }
 .prize__image img {
   width: 100%;
+  position: absolute;
 }
 
 .prize__text {
@@ -1978,6 +1995,7 @@ button:disabled {
 
 .prizes {
   display: block;
+  width: 100%;
   position: relative;
   margin-top: 40px;
   max-width: 1160px;
@@ -2034,11 +2052,18 @@ button:disabled {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  max-width: 300px;
+}
+.prize__image:before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 100%;
 }
 .prize__image img {
   width: 100%;
+  position: absolute;
 }
 
 .prize__text {
@@ -2764,7 +2789,7 @@ button:disabled {
   margin-top: 12px;
   font-size: 16px;
   line-height: 1.2;
-  font-weight: 500;
+  font-weight: 400;
 }
 .faq__sidebar .form {
   position: relative;
@@ -2803,6 +2828,7 @@ button:disabled {
 .faq__sidebar .form .radio + .label__text span,
 .faq__sidebar .form .checkbox + .label__text span {
   font-size: 14px;
+  font-weight: 400;
 }
 .faq__sidebar .form .radio + .label__text:before,
 .faq__sidebar .form .checkbox + .label__text:before {
@@ -3105,11 +3131,12 @@ button:disabled {
   margin-top: 10px;
 }
 
-.my-cheque {
+.profile-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  overflow: hidden;
   width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -3129,6 +3156,89 @@ button:disabled {
   margin: 100px auto 0px auto;
   padding: 40px 60px;
   border-radius: 32px;
+}
+.profile-section.blue {
+  background: var(--blue);
+  color: var(--white);
+  margin: 40px auto 0px auto;
+}
+.profile-section .prizes {
+  margin-top: 32px;
+  max-width: 876px;
+}
+.profile-section .prize {
+  padding: 35px 20px;
+  min-height: 392px;
+  gap: 13px;
+}
+.profile-section .prize.choose {
+  padding: 24px;
+}
+.profile-section .prize.choose .prize__image {
+  max-width: 160px;
+}
+.profile-section .prize__text {
+  min-height: 56px;
+  font-size: 20px;
+}
+.profile-section .arrow[data-arrow-prev] {
+  right: 99.2%;
+}
+.profile-section .arrow[data-arrow-next] {
+  left: 99.2%;
+}
+.profile-section .choices {
+  background: none;
+  width: 100%;
+  height: 36px !important;
+  border-radius: 5px;
+  background: #eef2ec !important;
+  margin: 0;
+  z-index: 10;
+  font-weight: 400;
+}
+.profile-section .choices.is-open {
+  border-radius: 5px 5px 0px 0px !important;
+}
+.profile-section .choices.is-open .choices__inner {
+  border-radius: 5px 5px 0px 0px !important;
+}
+.profile-section .choices__inner {
+  font-weight: 400;
+  line-height: 1 !important;
+  background: none !important;
+  font-weight: 500 !important;
+}
+.profile-section .choices[data-type*=select-one]::after {
+  right: 8px;
+}
+.profile-section .choices__list.choices__list--single {
+  background: none !important;
+  padding: 0px 0px 0px 16px !important;
+}
+.profile-section .choices__list.choices__list--single > .choices__item {
+  height: 36px;
+  color: var(--black) !important;
+}
+.profile-section .choices__list--dropdown {
+  left: 0px;
+  width: 100% !important;
+  border-radius: 0px 0px 5px 5px !important;
+  background: #eef2ec !important;
+  font-weight: 500 !important;
+}
+.profile-section .choices__list--dropdown .choices__item {
+  background: none;
+  opacity: 1;
+  color: var(--black) !important;
+  font-size: 12px !important;
+  line-height: 1.1 !important;
+}
+.profile-section .choices__list--dropdown .choices__item.is-selected {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+.profile-section .choices__list--dropdown .choices__item.is-highlighted {
+  background: rgba(0, 0, 0, 0.1) !important;
 }
 
 .my-cheque-table {
@@ -3167,6 +3277,16 @@ button:disabled {
 }
 .my-cheque-table td {
   border-bottom: 1px solid var(--bg-blue);
+}
+
+.choose-btn.red {
+  height: 47px;
+  border-radius: 16px;
+}
+.choose-btn.red span {
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .body.locked {

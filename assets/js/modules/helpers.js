@@ -60,33 +60,19 @@ export const initDropzones = () => {
   });
 };
 
-export const initStyckyButton = () => {
-  const styckyButton = document.querySelector('[data-stycky-button]');
-  const scrollContainer = document.querySelector('.body');
+export const initPrizeSelectPreview = () => {
+  const selects = document.querySelectorAll('[data-select]');
+  if (!selects.length) return;
 
-  if (!styckyButton || !scrollContainer) return;
+  selects.forEach(select => {
+    const image = select.closest('.prize')?.querySelector('.prize__image img');
+    if (!image) return;
 
-  let rafId = 0;
-
-  const updateButtonState = () => {
-    const scrollTop = scrollContainer.scrollTop;
-    const maxScrollTop = Math.max(0, scrollContainer.scrollHeight - scrollContainer.clientHeight);
-
-    styckyButton.classList.toggle('active', scrollTop > 0);
-    styckyButton.classList.toggle('end', scrollTop >= maxScrollTop);
-  };
-
-  const handleScroll = () => {
-    if (rafId) return;
-
-    rafId = requestAnimationFrame(() => {
-      rafId = 0;
-      updateButtonState();
+    select.addEventListener('change', () => {
+      const src = select.options[select.selectedIndex]?.dataset.image;
+      if (src) image.src = src;
     });
-  };
-
-  updateButtonState();
-  scrollContainer.addEventListener('scroll', handleScroll, { passive: true });
+  });
 };
 
 export const hidePreloader = () => {

@@ -7,9 +7,9 @@
     <meta name="theme-color" content="#1e2d68" />
     <meta name="description" content="Galbani - Личный кабинет" />
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
-    <!-- <link rel="stylesheet" type="text/css" href="./assets/css/choices.min.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/choices.min.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/swiper-bundle.min.css" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/dropzone.min.css" /> -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/dropzone.min.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/styles.min.css?v=1.1" />
     <title>Galbani - Личный кабинет</title>
   </head>
@@ -113,8 +113,7 @@
               </div>
 
               <!--MY CHEQUE-->
-
-              <div class="my-cheque">
+              <div class="profile-section">
                 <h2 class="title title--80 red">Мои чеки</h2>
                 <!--table-->
                 <table class="my-cheque-table">
@@ -144,6 +143,111 @@
                   </tbody>
                 </table>
                 <button type="button" class="button big" data-popup-open="cheque"><span>Зарегистрировать чек</span></button>
+              </div>
+
+              <!--MY PRIZE-->
+              <div class="profile-section blue">
+                <h2 class="title title--80">Мои призы</h2>
+
+                <div class="prizes" data-slider data-slides-per-view="3,2,1" data-space-between="10,10,10">
+                  <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <!--1-->
+                      <div class="swiper-slide">
+                        <div class="prize">
+                          <div class="prize__image">
+                            <img src="./assets/img/prizes/hoff.webp" alt="Galbani" width="300" />
+                          </div>
+                          <p class="prize__text">Сертификат Hoff <br />3&nbsp;500&nbsp;₽</p>
+                        </div>
+                      </div>
+                      <!--2-->
+                      <div class="swiper-slide">
+                        <div class="prize">
+                          <div class="prize__image">
+                            <img src="./assets/img/prizes/mvideo.webp" alt="Galbani" width="300" />
+                          </div>
+                          <p class="prize__text">Сертификат М.видео <br />3&nbsp;500&nbsp;₽</p>
+                        </div>
+                      </div>
+                      <!--Гарантированный-->
+                      <div class="swiper-slide">
+                        <div class="prize choose">
+                          <p class="prize__text">Выберите гарантированный&nbsp;приз</p>
+                          <div class="prize__image">
+                            <img src="./assets/img/prizes/phone.webp" alt="Galbani" width="300" />
+                          </div>
+                          <script>
+                            const onPrizeSelectSubmit = e => {
+                              e.preventDefault();
+                              alert('Форма выбора гарантированного приза');
+                            };
+                          </script>
+                          <form class="form swiper-no-swiping" onsubmit="onPrizeSelectSubmit(event)">
+                            <select data-select name="prize">
+                              <option data-image="./assets/img/prizes/phone.webp" value="100 рублей на телефон">100 рублей на&nbsp;телефон</option>
+                              <option data-image="./assets/img/prizes/yandex-afisha.webp" value="Сертификат Яндекс Афиша на 100 ₽">
+                                Сертификат Яндекс Афиша&nbsp;на&nbsp;100&nbsp;₽
+                              </option>
+                              <option data-image="./assets/img/prizes/yandex-market.webp" value="Сертфиикат Яндекс Маркет на 100 ₽">
+                                Сертфиикат Яндекс Маркет&nbsp;на&nbsp;100&nbsp;₽
+                              </option>
+                            </select>
+                            <button type="submit" class="button red full choose-btn"><span>Выбрать</span></button>
+                          </form>
+                        </div>
+                      </div>
+                      <!--3-->
+                      <div class="swiper-slide">
+                        <div class="prize">
+                          <div class="prize__image">
+                            <img src="./assets/img/prizes/okko.webp" alt="Galbani" width="300" />
+                          </div>
+                          <p class="prize__text">Сертификат на&nbsp;онлайн <br />кинотеатр 2&nbsp;000&nbsp;₽</p>
+                        </div>
+                      </div>
+                      <!--4-->
+                      <div class="swiper-slide">
+                        <div class="prize">
+                          <div class="prize__image">
+                            <img src="./assets/img/prizes/shopper-bag.webp" alt="Galbani" width="300" />
+                          </div>
+                          <p class="prize__text">Летняя сумка-шоппер</p>
+                        </div>
+                      </div>
+                      <!--5-->
+                      <div class="swiper-slide">
+                        <div class="prize">
+                          <div class="prize__image">
+                            <img src="./assets/img/prizes/plates.webp" alt="Galbani" width="300" />
+                          </div>
+                          <p class="prize__text">Набор брендированных <br />тарелок</p>
+                        </div>
+                      </div>
+                      <!--6-->
+                      <div class="swiper-slide">
+                        <div class="prize">
+                          <div class="prize__image">
+                            <img src="./assets/img/prizes/fartuh.webp" alt="Galbani" width="300" />
+                          </div>
+                          <p class="prize__text">Брендированный фартук</p>
+                        </div>
+                      </div>
+                      <!--7-->
+                      <div class="swiper-slide">
+                        <div class="prize">
+                          <div class="prize__image">
+                            <img src="./assets/img/prizes/pled.webp" alt="Galbani" width="300" />
+                          </div>
+                          <p class="prize__text">Плед для&nbsp;пикника</p>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="arrow" data-arrow-prev></button>
+                    <button class="arrow" data-arrow-next></button>
+                    <div class="swiper-pagination" data-pagination></div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -180,10 +284,13 @@
       </div>
     </div>
 
-    <!-- <script src="./assets/js/plugins/iMask.js"></script>
+    <!-- 
+    <script src="./assets/js/plugins/iMask.js"></script>
+    
+    -->
+    <script src="./assets/js/plugins/dropzone.min.js"></script>
     <script src="./assets/js/plugins/choices.min.js"></script>
     <script src="./assets/js/plugins/swiper-bundle.min.js"></script>
-    <script src="./assets/js/plugins/dropzone.min.js"></script> -->
     <script src="./assets/js/scripts.js" type="module" defer></script>
   </body>
 </html>
