@@ -1,5 +1,5 @@
 $select_height: 36px;
-$select_background: var(--white);
+$select_background: #eef2ec;
 $select_color: var(--black);
 $select_border_radius: 5px;
 $select_border: none;
@@ -27,11 +27,15 @@ $select_padding: 0px 14px;
       border-radius: $select_border_radius $select_border_radius 0px 0px;
     }
   }
+  .choices__inner {
+    background: none !important;
+  }
 }
+
 .choices[data-type*='select-one'] .choices__input {
   padding: 0;
   border-bottom: none;
-  background-color: none;
+
   margin: 0;
 }
 // Видимая часть select (заголовок)
@@ -81,10 +85,11 @@ $select_padding: 0px 14px;
     background: none;
   }
   .choices__item {
-    background: $select_background;
+    background: none !important;
+    background-color: none !important;
     opacity: 1;
     &.is-highlighted {
-      background: rgba(0, 0, 0, 0.1) !important;
+      background: rgba(0, 0, 0, 0.05) !important;
     }
   }
 }
@@ -92,7 +97,8 @@ $select_padding: 0px 14px;
 // Элемент внутри списка
 .choices__item {
   display: block;
-  background: none;
+  background: none !important;
+  background-color: none !important;
   box-shadow: none;
   font-size: $select_font_size !important;
   width: 100%;
@@ -113,7 +119,10 @@ $select_padding: 0px 14px;
     content: none !important;
   }
 }
-
+.choices[data-type*='select-one'] {
+  background: $select_background !important;
+  background-color: $select_background !important;
+}
 .choices[data-type*='select-one']::after {
   width: 24px;
   height: 24px;

@@ -7,9 +7,7 @@
     <meta name="theme-color" content="#1e2d68" />
     <meta name="description" content="Galbani - Выиграйте путешествие на двоих в Италию" />
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
-    <!-- 
-    
-    <link rel="stylesheet" type="text/css" href="./assets/css/dropzone.min.css" /> -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/dropzone.min.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/choices.min.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/styles.min.css?v=1.1" />
@@ -527,7 +525,7 @@
                       alert('Отправка формы FAQ');
                     }
                   </script>
-                  <form action="#" class="form" novalidate onsubmit="onFaqFormSubmit(event)">
+                  <form action="#" class="form form--callback" novalidate onsubmit="onFaqFormSubmit(event)">
                     <label class="label">
                       <input type="text" name="name" class="input" required placeholder="&nbsp;" />
                       <p class="placeholder">Имя</p>
@@ -573,7 +571,7 @@
           <menu class="footer-menu">
             <li><a href="#">Правила акции</a></li>
             <li><a href="#">Политика конфиденциальности</a></li>
-            <li><a href="#">Обратная связь</a></li>
+            <li><a href="#" data-popup-open="callback">Обратная связь</a></li>
           </menu>
 
           <p class="footer-text">
@@ -587,15 +585,207 @@
     <!--POPUPS-->
     <div class="backdrop" data-backdrop>
       <div class="popup" data-popup>
-        <!--AUTH POPUP-->
+        <!--CHEQUE POPUP-->
         <div class="popup-content" id="cheque">
           <button class="popup-close" data-popup-close></button>
-          CHEQUE POPUP
+          <h2 class="title title--40 red">Регистрация чека</h2>
+          <div class="buttons">
+            <button type="button" class="button normal full" data-popup-open="cheque-by-camera"><span>С помощью камеры</span></button>
+            <button type="button" class="button normal full" data-popup-open="cheque-instruction"><span>Загрузить фотографию</span></button>
+            <button type="button" class="button normal full" data-popup-open="cheque-by-self"><span>Ввести вручную</span></button>
+          </div>
+        </div>
+
+        <!--CHEQUE BY CAMERA POPUP-->
+        <div class="popup-content" id="cheque-by-camera">
+          <button class="popup-close" data-popup-close></button>
+          <h2 class="title title--40 red">Регистрация чека</h2>
+          <p class="popup-subtitle">Наведи камеру на&nbsp;QR-код, и&nbsp;он будет <br />автоматически отсканирован</p>
+
+          <div class="scanner">
+            <span class="scanner__error">Текст ошибки, если камера не&nbsp;поддерживается или не&nbsp;доступна на&nbsp;этом устройстве</span>
+          </div>
+
+          <select data-select name="cameras">
+            <option value="Camera 013552">Camera 013552</option>
+            <option value="Camera 013553">Camera 013553</option>
+          </select>
+
+          <div class="buttons">
+            <button type="button" class="button normal full" data-popup-open="cheque-by-self"><span>Ввести данные чека вручную</span></button>
+            <a class="popup-link" data-popup-open="cheque-by-photo">Загрузить фотографию чека</a>
+          </div>
+        </div>
+
+        <!--CHEQUE DOWNLOAD INSRTUCTION POPUP-->
+        <div class="popup-content" id="cheque-instruction">
+          <button class="popup-close" data-popup-close></button>
+          <h2 class="title title--40 red">Регистрация чека</h2>
+          <ul class="register-check-list">
+            <li>
+              <img src="./assets/img/cheque-info1.webp" alt="President" />
+              <span>Нажмите «Загрузить»</span>
+            </li>
+            <li>
+              <img src="./assets/img/cheque-info2.webp" alt="President" />
+              <span>Выберите фото чека</span>
+            </li>
+            <li>
+              <img src="./assets/img/cheque-info3.webp" alt="President" />
+              <span>Фото чека должно быть:</span>
+              <ul>
+                <li><span>чётким</span></li>
+                <li><span>с полным списком продуктов</span></li>
+                <li><span>на фото должен быть QR код</span></li>
+              </ul>
+            </li>
+            <li>
+              <img src="./assets/img/cheque-info4.webp" alt="President" />
+              <span>Если фото окажется плохого качества, чек принят не будет</span>
+            </li>
+          </ul>
+
+          <div class="example">
+            <img src="./assets/img/cheque.webp" alt="President" />
+            <span>Пример чека</span>
+          </div>
+
+          <div class="buttons">
+            <button type="button " class="button normal full" data-popup-open="cheque-by-photo">
+              <span>Загрузить</span>
+            </button>
+          </div>
+        </div>
+
+        <!--CHEQUE DOWNLOAD BY PHOTO POPUP-->
+        <div class="popup-content" id="cheque-by-photo">
+          <button class="popup-close" data-popup-close></button>
+          <h2 class="title title--40 red">Регистрация чека</h2>
+
+          <form action="#" class="dropzone" data-dropzone></form>
+          <script>
+            function onChequeLoadFormSubmit(e) {
+              e.preventDefault();
+              window.popup.open('cheque-success');
+            }
+          </script>
+          <button type="button" class="button normal full" onClick="onChequeLoadFormSubmit(event)">
+            <span>Загрузить</span>
+          </button>
+
+          <div class="buttons">
+            <p class="popup-subtitle">Нет возможности сфотографировать&nbsp;чек?</p>
+            <a class="popup-link" data-popup-open="cheque-by-self">Введи данные чека вручную</a>
+          </div>
+        </div>
+
+        <!--CHEQUE DOWNLOAD BY SELF POPUP-->
+        <div class="popup-content dark" id="cheque-by-self">
+          <button class="popup-close" data-popup-close></button>
+          <h2 class="title title--40 white">Ввод данных чека</h2>
+          <p class="popup-subtitle white">Внимательно введи <br />данные чека в&nbsp;поля ниже</p>
+          <script>
+            function onChequeFormSubmit(e) {
+              e.preventDefault();
+              window.popup.open('cheque-success');
+            }
+          </script>
+          <form action="#" class="form" novalidate onsubmit="onChequeFormSubmit(event)">
+            <label class="label">
+              <span class="label__text">ФН</span>
+              <input type="text" name="fn" class="input" placeholder="ФН" required />
+            </label>
+            <label class="label">
+              <span class="label__text">ФД</span>
+              <input type="text" name="fd" class="input" placeholder="ФД" required />
+            </label>
+            <label class="label">
+              <span class="label__text">ФП</span>
+              <input type="text" name="fp" class="input" placeholder="ФП" required />
+            </label>
+            <label class="label">
+              <span class="label__text">Дата покупки</span>
+              <input type="date" name="buy-date" class="input" required />
+            </label>
+            <label class="label">
+              <span class="label__text">Время покупки</span>
+              <input type="time" name="buy-time" class="input" required />
+            </label>
+            <label class="label">
+              <span class="label__text">Сумма покупки</span>
+              <input type="text" name="amount" inputmode="decimal" class="input" placeholder="0.00" required />
+            </label>
+            <div class="buttons">
+              <button type="submit" class="button red full"><span>Отправить</span></button>
+              <p class="popup-link white" data-popup-open="cheque-by-photo">Попробовать снова загрузить фото</p>
+            </div>
+          </form>
+        </div>
+
+        <!--CHEQUE DOWNLOAD SUCCESS POPUP-->
+        <div class="popup-content" id="cheque-success">
+          <button class="popup-close" data-popup-close></button>
+          <h2 class="title title--40 red">Чек зарегистрирован</h2>
+          <p class="popup-subtitle">Чек на&nbsp;проверке. <br />Следи за&nbsp;его статусом <br />в&nbsp;своём личном кабинете.</p>
+          <button type="button" class="button normal full" data-popup-open="cheque"><span>Загрузить еще</span></button>
+        </div>
+
+        <!--CALLBACK POPUP-->
+        <div class="popup-content dark" id="callback">
+          <button class="popup-close" data-popup-close></button>
+          <h2 class="title title--40 white">Остались вопросы?</h2>
+          <p class="popup-subtitle white">Напишите нам через <br />форму обратной связи</p>
+          <script>
+            function onFaqFormSubmit(e) {
+              e.preventDefault();
+              window.popup.open('callback-success');
+            }
+          </script>
+          <form action="#" class="form form--callback" novalidate onsubmit="onFaqFormSubmit(event)">
+            <label class="label">
+              <input type="text" name="name" class="input" required placeholder="&nbsp;" />
+              <p class="placeholder">Имя</p>
+            </label>
+            <label class="label">
+              <input type="email" name="email" class="input" required placeholder="&nbsp;" />
+              <p class="placeholder">Email</p>
+            </label>
+            <label class="label">
+              <textarea name="message" class="input textarea" required placeholder="Текст сообщения"></textarea>
+              <!-- <p class="placeholder">Текст сообщения</p> -->
+            </label>
+
+            <fieldset>
+              <label class="label">
+                <input type="checkbox" name="confirmation" class="checkbox" required />
+                <p class="label__text">
+                  <span>Я соглашаюсь с <a href="#">Политикой конфиденциальности</a></span>
+                </p>
+              </label>
+              <label class="label">
+                <input class="checkbox" required type="checkbox" name="confirmation2" />
+                <p class="label__text">
+                  <span>Я соглашаюсь с <a href="#">Политикой в&nbsp;отношении обработки персональных данных</a></span>
+                </p>
+              </label>
+            </fieldset>
+
+            <button type="submit" class="button red full"><span>Задать вопрос</span></button>
+          </form>
+        </div>
+
+        <!--CALLBACK-SUCCESS POPUP-->
+        <div class="popup-content" id="callback-success">
+          <button class="popup-close" data-popup-close></button>
+          <h2 class="title title--40 red">Заявка отправлена</h2>
+          <p class="popup-subtitle">Наш менеджер свяжется <br />с вами в ближайшее время</p>
+          <br />
+          <button type="button" class="button normal full" data-popup-close><span>Закрыть</span></button>
         </div>
       </div>
     </div>
 
-    <!--<script src="./assets/js/plugins/dropzone.min.js"></script> -->
+    <script src="./assets/js/plugins/dropzone.min.js"></script>
     <script src="./assets/js/plugins/iMask.js"></script>
     <script src="./assets/js/plugins/choices.min.js"></script>
     <script src="./assets/js/plugins/swiper-bundle.min.js"></script>

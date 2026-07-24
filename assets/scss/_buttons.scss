@@ -80,6 +80,14 @@
     }
   }
 
+  &.normal {
+    height: 50px;
+    padding: 0px 30px;
+    span {
+      font-size: 20px;
+    }
+  }
+
   &.small {
     height: 28px;
     padding: 0px 24px;
@@ -93,6 +101,7 @@
   &.red {
     background-color: var(--red);
     height: 50px;
+    padding: 0px 30px;
     span {
       font-size: 24px;
     }
