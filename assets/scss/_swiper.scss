@@ -7,6 +7,10 @@
   position: absolute;
   width: 40px;
   height: 60px;
+  @media (max-width: 1023px) {
+    width: 32px;
+    height: 32px;
+  }
   cursor: pointer;
   transition: 0.3s;
   z-index: 4;
@@ -21,12 +25,20 @@
     top: 50%;
     transform: translate(-50%, -50%);
     background: url('../img/svg/arrow-left.svg') no-repeat center center;
+    @media (max-width: 1023px) {
+      background-size: 100% auto;
+      right: calc(100% - 16px);
+    }
   }
   &[data-arrow-next] {
     left: 100%;
     top: 50%;
     transform: translate(50%, -50%);
     background: url('../img/svg/arrow-right.svg') no-repeat center center;
+    @media (max-width: 1023px) {
+      background-size: 100% auto;
+      left: calc(100% - 16px);
+    }
   }
 }
 

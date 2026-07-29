@@ -70,6 +70,13 @@
     span {
       font-size: 26px;
     }
+    @media (max-width: 767px) {
+      height: 52px;
+      padding: 0px 36px;
+      span {
+        font-size: 18px;
+      }
+    }
   }
 
   &.medium {
