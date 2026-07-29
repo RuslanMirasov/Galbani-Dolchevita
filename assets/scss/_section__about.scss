@@ -100,3 +100,121 @@
     z-index: 0;
   }
 }
+
+//1366
+@media (max-width: 1439px) {
+  .section--about {
+    height: auto;
+    .subtitle {
+      font-size: 16px;
+      margin-top: 28px;
+    }
+
+    .title--80 {
+      span {
+        max-width: 200px;
+        font-size: 16px;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .about-title {
+    span {
+      margin-left: 140px;
+      padding: 10px 26px;
+      font-size: 16px;
+    }
+  }
+
+  .about-slider {
+    max-width: 580px;
+  }
+
+  .calendar {
+    padding: 20px 24px 20px 0px;
+    gap: 10px;
+    margin-top: 50px;
+
+    p {
+      font-size: 14px;
+    }
+
+    img {
+      width: 150px;
+      margin-top: -90px;
+    }
+  }
+}
+
+//768
+@media (max-width: 1023px) {
+  .section--about {
+    background: url('../img/about/about-tablet.webp') no-repeat center bottom/cover;
+  }
+
+  .calendar {
+    margin-top: 60vw;
+  }
+}
+
+//375
+@media (max-width: 767px) {
+  .section--about {
+    background: url('../img/about/about-mobil.webp') no-repeat center bottom/cover;
+    padding-top: 54px;
+    padding-bottom: 36px;
+    .title--80 {
+      font-size: 40px;
+      span {
+        max-width: 110px;
+        font-size: 10px;
+        line-height: 1.3;
+        margin-left: 5px;
+      }
+    }
+
+    .subtitle {
+      font-size: 18px;
+      margin-top: 24px;
+    }
+  }
+
+  .about-title {
+    span {
+      display: block;
+      max-width: 162px;
+      position: relative;
+      padding: 6px 24px;
+      font-size: 18px;
+      line-height: 1;
+      margin: 0 auto;
+      margin-bottom: 16px;
+    }
+  }
+  .about-slider {
+    max-width: 100%;
+  }
+  .calendar {
+    margin-top: 70vw;
+    padding: 20px 50px 20px 0px;
+    p {
+      max-width: 270px;
+      font-size: 18px;
+      line-height: 1.3;
+      font-weight: 400;
+      br {
+        display: none;
+      }
+    }
+    img {
+      position: absolute;
+      left: -4px;
+      top: auto;
+      bottom: calc(100% - 20px);
+      width: 114px;
+
+      margin-top: 0px;
+    }
+  }
+}
