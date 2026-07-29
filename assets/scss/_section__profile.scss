@@ -255,3 +255,216 @@
     font-weight: 500;
   }
 }
+
+//1024
+@media (max-width: 1279px) {
+  .section--profile {
+    padding-top: 118px;
+  }
+
+  .profile {
+    max-width: 768px;
+    margin: 40px auto 0px auto;
+    gap: 20px;
+  }
+
+  .profile-user,
+  .profile-game {
+    max-width: 482px;
+  }
+
+  .profile-user {
+    border-radius: 20px;
+    padding: 20px;
+
+    .title--40 {
+      font-size: 32px;
+    }
+
+    ul {
+      li {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .logout {
+    width: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .profile-game {
+    gap: 20px;
+  }
+
+  .profile-game-text {
+    padding: 20px;
+    padding-bottom: 30px;
+
+    strong {
+      font-size: 17.5px;
+    }
+
+    p {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .button {
+      margin-top: 10px;
+    }
+  }
+
+  .profile-section {
+    gap: 20px;
+    max-width: 768px;
+    margin: 50px auto 0px auto;
+    padding: 32px;
+    border-radius: 30px;
+    &.blue {
+      margin: 32px auto 0px auto;
+    }
+
+    .prizes {
+      margin-top: 16px;
+      max-width: 620px;
+    }
+
+    .prize {
+      padding: 24px 20px;
+      min-height: 410px;
+      gap: 13px;
+    }
+
+    .prize__text {
+      min-height: 54px;
+      font-size: 20px;
+    }
+
+    .arrow {
+      &[data-arrow-prev] {
+        right: 99%;
+      }
+      &[data-arrow-next] {
+        left: 99%;
+      }
+    }
+
+    .choices__list--dropdown {
+      .choices__item {
+        font-size: 13px !important;
+      }
+    }
+  }
+
+  .my-cheque-table {
+    thead {
+      font-size: 18px;
+      min-height: 50px;
+    }
+
+    th,
+    td {
+      height: 50px;
+      padding: 0px 20px;
+      &:first-child {
+        width: 41%;
+        padding-left: 32px;
+      }
+      &:last-child {
+        width: 200px;
+        padding-right: 32px;
+      }
+    }
+  }
+}
+
+//375
+@media (max-width: 767px) {
+  .section--profile {
+    padding-top: 120px;
+  }
+
+  .profile {
+    max-width: 414px;
+    margin: 40px auto 0px auto;
+    gap: 20px;
+  }
+
+  .profile-user,
+  .profile-game {
+    max-width: 100%;
+  }
+
+  .profile-user {
+    padding-bottom: 40px;
+
+    .title--40 {
+      font-size: 30px;
+    }
+  }
+
+  .profile-section {
+    gap: 20px;
+    max-width: 100%;
+    margin: 50px auto 0px auto;
+    padding: 32px;
+    &.blue {
+      margin: 20px auto 0px auto;
+    }
+
+    .prizes {
+      margin-top: 16px;
+      max-width: 100%;
+    }
+
+    .prize {
+      padding: 20px 15px;
+      min-height: 385px;
+    }
+
+    .prize__text {
+      min-height: 54px;
+      font-size: 20px;
+    }
+
+    .arrow {
+      &[data-arrow-prev] {
+        right: 94.5%;
+      }
+      &[data-arrow-next] {
+        left: 94.5%;
+      }
+    }
+
+    .choices__list--dropdown {
+      .choices__item {
+        font-size: 12px !important;
+      }
+    }
+  }
+
+  .my-cheque-table {
+    thead {
+      font-size: 12px;
+      min-height: 40px;
+    }
+
+    th,
+    td {
+      height: 40px;
+      padding: 0px 5px;
+      font-size: 10px;
+      white-space: nowrap;
+      &:first-child {
+        width: auto;
+        padding-left: 0px;
+      }
+      &:last-child {
+        width: auto;
+        padding-right: 0px;
+      }
+    }
+  }
+}

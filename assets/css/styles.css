@@ -466,6 +466,11 @@ button:disabled {
   line-height: 1.3;
   font-weight: 400;
 }
+@media (max-width: 767px) {
+  .subtitle {
+    font-size: 18px;
+  }
+}
 .subtitle.ta--c {
   text-align: center;
 }
@@ -1054,6 +1059,15 @@ button:disabled {
 }
 .button.medium span {
   font-size: 26px;
+}
+@media (max-width: 767px) {
+  .button.medium {
+    height: 50px;
+    padding: 0px 36px;
+  }
+  .button.medium span {
+    font-size: 18px;
+  }
 }
 .button.normal {
   height: 50px;
@@ -2803,27 +2817,6 @@ button:disabled {
     left: 54%;
     bottom: -40px;
   }
-  .go-back {
-    left: 36px;
-    top: 40px;
-    gap: 12px;
-  }
-  .go-back span {
-    font-size: 24px;
-  }
-  .go-back:before {
-    width: 12px;
-    height: 20px;
-  }
-  .game-timer {
-    right: 30px;
-    top: 30px;
-    width: 80px;
-    height: 80px;
-  }
-  .game-timer span {
-    font-size: 42px;
-  }
   .game-wrapper {
     padding: 30px;
   }
@@ -2839,6 +2832,30 @@ button:disabled {
     max-width: 450px;
     left: 50%;
     bottom: -50px;
+  }
+  .go-back {
+    left: 24px;
+    top: 30px;
+    gap: 0px;
+  }
+  .go-back span {
+    display: none;
+  }
+  .go-back:before {
+    width: 16px;
+    height: 30px;
+  }
+  .game-timer {
+    right: 15px;
+    top: 15px;
+    width: 60px;
+    height: 60px;
+  }
+  .game-timer span {
+    font-size: 30px;
+  }
+  .popup-game-logo {
+    width: 142px;
   }
 }
 @media (max-width: 1023px) {
@@ -3982,6 +3999,174 @@ button:disabled {
   font-weight: 500;
 }
 
+@media (max-width: 1279px) {
+  .section--profile {
+    padding-top: 118px;
+  }
+  .profile {
+    max-width: 768px;
+    margin: 40px auto 0px auto;
+    gap: 20px;
+  }
+  .profile-user,
+  .profile-game {
+    max-width: 482px;
+  }
+  .profile-user {
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .profile-user .title--40 {
+    font-size: 32px;
+  }
+  .profile-user ul li {
+    font-size: 16px;
+  }
+  .logout {
+    width: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+  .profile-game {
+    gap: 20px;
+  }
+  .profile-game-text {
+    padding: 20px;
+    padding-bottom: 30px;
+  }
+  .profile-game-text strong {
+    font-size: 17.5px;
+  }
+  .profile-game-text p {
+    font-size: 11px;
+    text-align: center;
+  }
+  .profile-game-text .button {
+    margin-top: 10px;
+  }
+  .profile-section {
+    gap: 20px;
+    max-width: 768px;
+    margin: 50px auto 0px auto;
+    padding: 32px;
+    border-radius: 30px;
+  }
+  .profile-section.blue {
+    margin: 32px auto 0px auto;
+  }
+  .profile-section .prizes {
+    margin-top: 16px;
+    max-width: 620px;
+  }
+  .profile-section .prize {
+    padding: 24px 20px;
+    min-height: 410px;
+    gap: 13px;
+  }
+  .profile-section .prize__text {
+    min-height: 54px;
+    font-size: 20px;
+  }
+  .profile-section .arrow[data-arrow-prev] {
+    right: 99%;
+  }
+  .profile-section .arrow[data-arrow-next] {
+    left: 99%;
+  }
+  .profile-section .choices__list--dropdown .choices__item {
+    font-size: 13px !important;
+  }
+  .my-cheque-table thead {
+    font-size: 18px;
+    min-height: 50px;
+  }
+  .my-cheque-table th,
+  .my-cheque-table td {
+    height: 50px;
+    padding: 0px 20px;
+  }
+  .my-cheque-table th:first-child,
+  .my-cheque-table td:first-child {
+    width: 41%;
+    padding-left: 32px;
+  }
+  .my-cheque-table th:last-child,
+  .my-cheque-table td:last-child {
+    width: 200px;
+    padding-right: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .section--profile {
+    padding-top: 120px;
+  }
+  .profile {
+    max-width: 414px;
+    margin: 40px auto 0px auto;
+    gap: 20px;
+  }
+  .profile-user,
+  .profile-game {
+    max-width: 100%;
+  }
+  .profile-user {
+    padding-bottom: 40px;
+  }
+  .profile-user .title--40 {
+    font-size: 30px;
+  }
+  .profile-section {
+    gap: 20px;
+    max-width: 100%;
+    margin: 50px auto 0px auto;
+    padding: 32px;
+  }
+  .profile-section.blue {
+    margin: 20px auto 0px auto;
+  }
+  .profile-section .prizes {
+    margin-top: 16px;
+    max-width: 100%;
+  }
+  .profile-section .prize {
+    padding: 20px 15px;
+    min-height: 385px;
+  }
+  .profile-section .prize__text {
+    min-height: 54px;
+    font-size: 20px;
+  }
+  .profile-section .arrow[data-arrow-prev] {
+    right: 94.5%;
+  }
+  .profile-section .arrow[data-arrow-next] {
+    left: 94.5%;
+  }
+  .profile-section .choices__list--dropdown .choices__item {
+    font-size: 12px !important;
+  }
+  .my-cheque-table thead {
+    font-size: 12px;
+    min-height: 40px;
+  }
+  .my-cheque-table th,
+  .my-cheque-table td {
+    height: 40px;
+    padding: 0px 5px;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+  .my-cheque-table th:first-child,
+  .my-cheque-table td:first-child {
+    width: auto;
+    padding-left: 0px;
+  }
+  .my-cheque-table th:last-child,
+  .my-cheque-table td:last-child {
+    width: auto;
+    padding-right: 0px;
+  }
+}
 .body.locked {
   overflow-x: hidden;
   overflow-y: hidden;
@@ -4175,6 +4360,18 @@ button:disabled {
   gap: 50px;
   margin: auto;
 }
+@media (max-width: 1279px) {
+  .popup-game .popup-game-text {
+    gap: 32px;
+  }
+  .popup-game .popup-game-text .button {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 300px;
+    max-width: 300px;
+    min-width: 300px;
+  }
+}
 .popup-game .button {
   min-width: 354px;
 }
@@ -4188,6 +4385,11 @@ button:disabled {
   line-height: 1.4;
   font-weight: 400;
   color: var(--bg-blue);
+}
+@media (max-width: 1279px) {
+  .popup-game .subtitle b {
+    font-size: 24px;
+  }
 }
 
 #game-intro .button,

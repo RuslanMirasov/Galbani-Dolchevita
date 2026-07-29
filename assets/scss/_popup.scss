@@ -154,6 +154,15 @@ $popup_transition: 0.5s;
     align-content: center;
     gap: 50px;
     margin: auto;
+    @media (max-width: 1279px) {
+      gap: 32px;
+      .button {
+        flex-shrink: 0;
+        width: 300px;
+        max-width: 300px;
+        min-width: 300px;
+      }
+    }
   }
 
   .button {
@@ -168,6 +177,9 @@ $popup_transition: 0.5s;
       line-height: 1.4;
       font-weight: 400;
       color: var(--bg-blue);
+      @media (max-width: 1279px) {
+        font-size: 24px;
+      }
     }
   }
 }
