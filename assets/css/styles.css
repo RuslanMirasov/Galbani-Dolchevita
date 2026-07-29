@@ -2758,6 +2758,125 @@ button:disabled {
   z-index: 1;
 }
 
+@media (max-width: 1439px) {
+  .section--game {
+    padding-top: 150px;
+    padding-bottom: 50px;
+  }
+  .section--game .subtitle {
+    max-width: 450px;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  .game-prize-info {
+    max-width: 450px;
+    gap: 40px;
+    margin-top: 42px;
+  }
+  .game-prize-info img {
+    max-width: 120px;
+  }
+  .game-prize-info .info p {
+    font-size: 20px;
+  }
+  .game-prize-info .info .button {
+    margin-top: 30px;
+  }
+  .italy-full-image {
+    max-width: 480px;
+    right: auto;
+    left: 54%;
+    bottom: -40px;
+  }
+  .go-back {
+    left: 36px;
+    top: 40px;
+    gap: 12px;
+  }
+  .go-back span {
+    font-size: 24px;
+  }
+  .go-back:before {
+    width: 12px;
+    height: 20px;
+  }
+  .game-timer {
+    right: 30px;
+    top: 30px;
+    width: 80px;
+    height: 80px;
+  }
+  .game-timer span {
+    font-size: 42px;
+  }
+  .game-wrapper {
+    padding: 30px;
+  }
+}
+@media (max-width: 1279px) {
+  .section--game {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    min-height: calc(100svh - 50px);
+    scroll-margin: 50px;
+  }
+  .italy-full-image {
+    max-width: 450px;
+    left: 50%;
+    bottom: -50px;
+  }
+}
+@media (max-width: 1023px) {
+  .section--game {
+    padding-top: 100px;
+    padding-bottom: 40px;
+    min-height: 10px;
+  }
+  .section--game .container {
+    max-width: 690px;
+  }
+  .italy-full-image {
+    position: relative;
+    width: 100%;
+    max-width: 375px;
+    left: auto;
+    bottom: auto;
+    margin: 0px auto -50px auto;
+  }
+  .game-prize-info {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .section--game {
+    padding-top: 40px;
+  }
+  .section--game .title,
+  .section--game .subtitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .italy-full-image {
+    max-width: 340px;
+    margin: 0px auto -60px auto;
+  }
+  .game-prize-info {
+    max-width: 320px;
+    gap: 26px;
+    margin: 0 auto;
+    margin-top: 42px;
+  }
+  .game-prize-info img {
+    max-width: 84px;
+  }
+  .game-prize-info .info p {
+    font-size: 18px;
+  }
+  .game-prize-info .info .button {
+    margin-top: 16px;
+  }
+}
 .winners {
   display: -webkit-box;
   display: -ms-flexbox;
