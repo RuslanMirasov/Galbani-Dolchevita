@@ -1,6 +1,9 @@
 .section--products {
   min-height: 100svh;
   padding-top: 120px;
+  @media (max-width: 767px) {
+    padding-top: 100px;
+  }
   .title.title--60 {
     margin-top: 22px;
     line-height: 1.3;
@@ -12,6 +15,9 @@
   position: relative;
   width: 100%;
   max-width: 1160px;
+  @media (max-width: 767px) {
+    max-width: 320px;
+  }
   margin: 0 auto;
   margin-top: 26px;
   flex-wrap: wrap;
@@ -19,9 +25,13 @@
   gap: 10px;
 
   li {
-    flex: 1;
-    min-width: 320px;
-    max-width: 380px;
+    width: calc((100% - 20px) / 3);
+    @media (max-width: 1023px) {
+      width: calc((100% - 20px) / 2);
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+    }
   }
 }
 
@@ -69,4 +79,7 @@
   line-height: 1.2;
   font-weight: 600;
   color: var(--blue);
+  @media (max-width: 1279px) {
+    font-size: 18px;
+  }
 }
