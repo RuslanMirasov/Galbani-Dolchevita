@@ -1635,7 +1635,6 @@ button:disabled {
   background: url("../img/hero/bg.webp") no-repeat center center/cover;
   margin-top: -60px;
   padding-top: 60px;
-  height: 700px;
 }
 @media (max-width: 1439px) {
   .section--hero {
@@ -1725,6 +1724,12 @@ button:disabled {
             transform: translate(0%, 0%);
   }
 }
+@media (max-width: 1599px) {
+  .section--hero {
+    height: 100svh;
+    min-height: 650px !important;
+  }
+}
 @media (max-width: 1365px) {
   .hero-image {
     width: 350px;
@@ -1733,8 +1738,7 @@ button:disabled {
 @media (max-width: 1279px) {
   .section--hero {
     height: 100svh;
-    min-height: 768px !important;
-    max-height: 768px;
+    min-height: 100svh !important;
   }
   .hero-image {
     width: 330px;
@@ -1887,6 +1891,75 @@ button:disabled {
   line-height: 1.5;
 }
 
+@media (max-width: 1279px) {
+  .howToWin li {
+    gap: 12px;
+  }
+  .howToWin li:before {
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .howToWin li .button {
+    margin-top: 8px;
+  }
+  .howToWin__title {
+    font-size: 22px;
+  }
+  .howToWin__text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1023px) {
+  .howToWin {
+    max-width: 600px;
+    gap: 32px;
+  }
+  .howToWin li {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+    width: calc(50% - 16px);
+    gap: 14px;
+  }
+  .howToWin li .button {
+    margin-top: 10px;
+  }
+  .howToWin__title {
+    font-size: 24px;
+  }
+  .howToWin__text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1023px) {
+  .howToWin {
+    max-width: 260px;
+    gap: 14px;
+  }
+  .howToWin li {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+    width: 100%;
+    gap: 8px;
+  }
+  .howToWin li .button {
+    margin-top: 10px;
+  }
+  .howToWin__image {
+    max-width: 200px;
+  }
+  .howToWin__title {
+    font-size: 24px;
+  }
+  .howToWin__text {
+    max-width: 238px;
+    font-size: 14px;
+  }
+}
 .section--about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3634,6 +3707,7 @@ button:disabled {
   -webkit-box-shadow: none;
           box-shadow: none;
   gap: 18px;
+  margin: 0px auto;
 }
 .popup-content.dark {
   background: -webkit-gradient(linear, left top, left bottom, from(#1e2d68), to(#294b92));

@@ -86,3 +86,88 @@
   font-size: 16px;
   line-height: 1.5;
 }
+
+//1024
+@media (max-width: 1279px) {
+  .howToWin {
+    li {
+      gap: 12px;
+      &:before {
+        top: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 28px;
+        line-height: 40px;
+      }
+
+      .button {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .howToWin__title {
+    font-size: 22px;
+  }
+
+  .howToWin__text {
+    font-size: 14px;
+  }
+}
+
+//768
+@media (max-width: 1023px) {
+  .howToWin {
+    max-width: 600px;
+    gap: 32px;
+
+    li {
+      flex: auto;
+      width: calc(50% - 16px);
+      gap: 14px;
+
+      .button {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .howToWin__title {
+    font-size: 24px;
+  }
+
+  .howToWin__text {
+    font-size: 16px;
+  }
+}
+
+//375
+@media (max-width: 1023px) {
+  .howToWin {
+    max-width: 260px;
+    gap: 14px;
+
+    li {
+      flex: auto;
+      width: 100%;
+      gap: 8px;
+
+      .button {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .howToWin__image {
+    max-width: 200px;
+  }
+
+  .howToWin__title {
+    font-size: 24px;
+  }
+
+  .howToWin__text {
+    max-width: 238px;
+    font-size: 14px;
+  }
+}
