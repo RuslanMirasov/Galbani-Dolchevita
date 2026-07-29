@@ -116,6 +116,11 @@ button {
   }
   @media (max-width: 1023px) {
     max-width: 768px;
+    padding: 0px 20px;
+  }
+  @media (max-width: 767px) {
+    max-width: 414px;
+    padding: 0px 15px;
   }
 }
 
@@ -136,5 +141,23 @@ button {
   }
   &.visible {
     overflow: visible;
+  }
+}
+
+@media (min-width: 1024px) {
+  .show-in-tablet {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .delete-in-tablet {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .show-in-mobil {
+    display: none !important;
   }
 }

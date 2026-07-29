@@ -13,7 +13,7 @@
     padding: 0px 30px;
   }
   @media (max-width: 767px) {
-    padding: 0px 20px;
+    padding: 0px 15px;
   }
 
   &:before {
@@ -37,12 +37,24 @@
       width: 400px;
       height: 370px;
       @media (max-width: 1439px) {
-        width: 320px;
-        height: 320px;
+        width: 300px;
+        height: 300px;
       }
       @media (max-width: 1279px) {
-        width: 100px;
-        height: 100px;
+        width: 160px;
+        height: 160px;
+      }
+      @media (max-width: 1023px) {
+        width: 250px;
+        height: 250px;
+      }
+      @media (max-width: 767px) {
+        width: 130px;
+        height: 130px;
+      }
+      @media (max-width: 374px) {
+        width: 120px;
+        height: 120px;
       }
       top: 0%;
       transform: translate(-50%, -100%);

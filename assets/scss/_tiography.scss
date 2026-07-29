@@ -37,6 +37,9 @@
   &.title--40 {
     font-size: 40px;
     line-height: 1;
+    @media (max-width: 666px) {
+      font-size: 36px;
+    }
   }
 
   &.title--32 {

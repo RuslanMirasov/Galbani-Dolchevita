@@ -108,8 +108,8 @@ $popup_transition: 0.5s;
   text-align: center;
   gap: 16px;
   position: relative;
-  margin: 0 auto;
-  width: 100%;
+  margin: 20px auto;
+  width: calc(100% - 30px);
   user-select: none;
   pointer-events: all;
   max-width: 375px;
@@ -118,6 +118,10 @@ $popup_transition: 0.5s;
   flex-shrink: 0;
   border-radius: 30px;
   box-shadow: 0px 10px 20px rgba(1, 45, 104, 0.3);
+
+  @media (max-width: 666px) {
+    padding: 50px 20px 30px;
+  }
 
   &.popup-game {
     min-height: 100svh;
@@ -335,5 +339,15 @@ $popup_transition: 0.5s;
     color: var(--white);
     opacity: 0.8;
     font-weight: 400;
+  }
+  &.small {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  &.ta--l {
+    text-align: left;
+  }
+  &.full {
+    width: 100%;
   }
 }

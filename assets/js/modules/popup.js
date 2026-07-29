@@ -4,6 +4,7 @@ export const popup = {
   _scrollY: 0,
   _isOpening: false,
   _isAnimating: false,
+  _animation: 500,
 
   init() {
     this._backdrop = document.querySelector('[data-backdrop]');
@@ -28,17 +29,12 @@ export const popup = {
       return;
     }
 
+    const isVisible = this._popup.classList.contains('visible');
     const currentContent = this._popup.querySelector('.popup-content[style*="display: flex"]');
 
-    if (currentContent && currentContent !== newContent) {
-      await this.close();
-    }
-
-    const alreadyVisible = this._popup.classList.contains('visible');
-
-    if (alreadyVisible) {
+    if (isVisible && currentContent !== newContent) {
       await this._switchContent(newContent);
-    } else {
+    } else if (!isVisible) {
       this._scrollY = window.scrollY;
       await this._showContent(newContent);
     }
@@ -60,6 +56,28 @@ export const popup = {
     this._hideAllContent();
 
     this._isOpening = false;
+  },
+
+  async _switchContent(newContent) {
+    this._popup.classList.remove('visible');
+    await this._delay(this._animation);
+
+    this._hideAllContent();
+    newContent.style.display = 'flex';
+    this._scrollBackdropToTop();
+
+    this._popup.classList.add('visible');
+    await this._delay(this._animation);
+  },
+
+  async _delay(ms) {
+    this._isAnimating = true;
+    return new Promise(resolve => {
+      setTimeout(() => {
+        this._isAnimating = false;
+        resolve();
+      }, ms);
+    });
   },
 
   _bindCloseEvents() {
@@ -87,16 +105,6 @@ export const popup = {
         this.close();
       }
     });
-  },
-
-  async _switchContent(newContent) {
-    this._popup.classList.remove('visible');
-    await this._waitForTransition(this._backdrop);
-    this._hideAllContent();
-    newContent.style.display = 'flex';
-    this._scrollBackdropToTop();
-    this._popup.classList.add('visible');
-    await this._waitForTransition(this._backdrop);
   },
 
   async _showContent(newContent) {
@@ -146,17 +154,10 @@ export const popup = {
     this._isAnimating = true;
 
     return new Promise(resolve => {
-      const duration = parseFloat(getComputedStyle(element).transitionDuration) * 1000;
-
-      if (duration === 0) {
-        this._isAnimating = false;
-        resolve();
-        return;
-      }
-
       const handler = e => {
         if (e.propertyName === propertyName) {
           element.removeEventListener('transitionend', handler);
+          clearTimeout(timer);
           this._isAnimating = false;
           resolve();
         }
@@ -164,11 +165,11 @@ export const popup = {
 
       element.addEventListener('transitionend', handler, { once: true });
 
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         element.removeEventListener('transitionend', handler);
         this._isAnimating = false;
         resolve();
-      }, duration + 50);
+      }, this._animation + 50);
     });
   },
 
