@@ -449,7 +449,7 @@ button:disabled {
 }
 .title.title--40 {
   font-size: 40px;
-  line-height: 1;
+  line-height: 1.2;
 }
 @media (max-width: 666px) {
   .title.title--40 {
@@ -1209,6 +1209,9 @@ button:disabled {
 }
 
 .logo-wrapper {
+  display: block;
+  position: relative;
+  z-index: 2;
   width: 120px;
   height: 60px;
 }
@@ -1323,6 +1326,7 @@ button:disabled {
     z-index: 2;
   }
   .header .logo {
+    display: block;
     position: relative;
     z-index: 2;
   }
@@ -3445,7 +3449,7 @@ button:disabled {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 30px 50px 0px 50px;
+  padding: 70px 50px 0px 50px;
 }
 .faq .active .question {
   border-radius: 20px 20px 0px 0px;
@@ -3865,7 +3869,7 @@ button:disabled {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 .profile-user ul li {
   font-size: 20px;
@@ -3883,12 +3887,12 @@ button:disabled {
 .logout {
   width: 24px;
   position: absolute;
-  right: 30px;
-  bottom: 30px;
+  right: 36px;
+  bottom: 36px;
 }
 
 .profile-game {
-  gap: 38px;
+  gap: 36px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3912,10 +3916,10 @@ button:disabled {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  gap: 12px;
+  gap: 10px;
   background: var(--blue);
   color: var(--white);
-  padding: 32px;
+  padding: 28px;
   border-radius: 30px;
 }
 .profile-game-text strong,
@@ -4203,10 +4207,13 @@ button:disabled {
     max-width: 100%;
   }
   .profile-user {
-    padding-bottom: 40px;
+    padding-bottom: 20px;
   }
   .profile-user .title--40 {
     font-size: 30px;
+  }
+  .profile-game-text {
+    padding-bottom: 20px;
   }
   .profile-section {
     gap: 20px;
