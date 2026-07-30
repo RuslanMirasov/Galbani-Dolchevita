@@ -2711,6 +2711,51 @@ button:disabled {
   bottom: -50px;
 }
 
+.popup-is-opened .go-back,
+.popup-is-opened .game-bottom-text {
+  -webkit-transform: translateX(-200%);
+      -ms-transform: translateX(-200%);
+          transform: translateX(-200%);
+  opacity: 0;
+  pointer-events: none;
+}
+.popup-is-opened .game-timer {
+  -webkit-transform: translateX(200%);
+      -ms-transform: translateX(200%);
+          transform: translateX(200%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.game-bottom-text {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: absolute;
+  left: 36px;
+  bottom: 40px;
+  z-index: 2;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: opacity 1s var(--cubic), -webkit-transform 1s var(--cubic);
+  transition: opacity 1s var(--cubic), -webkit-transform 1s var(--cubic);
+  transition: transform 1s var(--cubic), opacity 1s var(--cubic);
+  transition: transform 1s var(--cubic), opacity 1s var(--cubic), -webkit-transform 1s var(--cubic);
+  pointer-events: auto;
+  opacity: 1;
+}
+.game-bottom-text.hidden {
+  -webkit-transform: translateX(-200%);
+      -ms-transform: translateX(-200%);
+          transform: translateX(-200%);
+  pointer-events: none;
+  opacity: 0;
+}
+
 .go-back {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2728,6 +2773,22 @@ button:disabled {
   -ms-flex-line-pack: center;
       align-content: center;
   gap: 12px;
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: opacity 1s var(--cubic), -webkit-transform 1s var(--cubic);
+  transition: opacity 1s var(--cubic), -webkit-transform 1s var(--cubic);
+  transition: transform 1s var(--cubic), opacity 1s var(--cubic);
+  transition: transform 1s var(--cubic), opacity 1s var(--cubic), -webkit-transform 1s var(--cubic);
+  pointer-events: auto;
+  opacity: 1;
+}
+.go-back.hidden {
+  -webkit-transform: translateX(-200%);
+      -ms-transform: translateX(-200%);
+          transform: translateX(-200%);
+  pointer-events: none;
+  opacity: 0;
 }
 .go-back span {
   font-size: 24px;
@@ -2770,6 +2831,22 @@ button:disabled {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: opacity 1s var(--cubic), -webkit-transform 1s var(--cubic);
+  transition: opacity 1s var(--cubic), -webkit-transform 1s var(--cubic);
+  transition: transform 1s var(--cubic), opacity 1s var(--cubic);
+  transition: transform 1s var(--cubic), opacity 1s var(--cubic), -webkit-transform 1s var(--cubic);
+  pointer-events: auto;
+  opacity: 1;
+}
+.game-timer.hidden {
+  -webkit-transform: translateX(200%);
+      -ms-transform: translateX(200%);
+          transform: translateX(200%);
+  opacity: 0;
+  pointer-events: none;
 }
 .game-timer span {
   font-family: var(--font);
@@ -2832,6 +2909,11 @@ button:disabled {
     max-width: 450px;
     left: 50%;
     bottom: -50px;
+  }
+  .game-bottom-text {
+    left: 24px;
+    bottom: 30px;
+    font-size: 14px;
   }
   .go-back {
     left: 24px;
@@ -4328,6 +4410,9 @@ button:disabled {
   gap: 18px;
   margin: 0px auto;
 }
+.popup-content.recipe {
+  max-width: 768px;
+}
 .popup-content.dark {
   background: -webkit-gradient(linear, left top, left bottom, from(#1e2d68), to(#294b92));
   background: linear-gradient(#1e2d68, #294b92);
@@ -4594,6 +4679,147 @@ button:disabled {
 }
 .popup-subtitle.full {
   width: 100%;
+}
+
+.recipe-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  gap: 20px;
+}
+
+.recipe-subtitle {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  gap: 10px;
+  color: var(--blue);
+}
+@media (max-width: 767px) {
+  .recipe-subtitle {
+    gap: 6px;
+  }
+}
+.recipe-subtitle span {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+  padding: 4px 0px;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  .recipe-subtitle span {
+    font-size: 14px;
+  }
+}
+.recipe-subtitle p {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
+  padding: 4px 14px;
+  border-radius: 16px;
+  background: var(--light-blue);
+  text-align: left;
+}
+@media (max-width: 767px) {
+  .recipe-subtitle p {
+    font-size: 14px;
+    border-radius: 14px;
+    padding: 4px 10px;
+  }
+}
+
+.recipe-image {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  border-radius: 30px;
+}
+@media (max-width: 767px) {
+  .recipe-image {
+    border-radius: 20px;
+  }
+}
+.recipe-image img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+.recipe-image:before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 45%;
+}
+
+.recipe-list {
+  width: calc((100% - 20px) / 2);
+}
+@media (max-width: 767px) {
+  .recipe-list {
+    width: 100%;
+  }
+}
+.recipe-list {
+  text-align: left;
+  color: var(--red);
+  font-size: 18px;
+  line-height: 1.3;
+}
+@media (max-width: 767px) {
+  .recipe-list {
+    font-size: 14px;
+  }
+}
+.recipe-list b {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--blue);
+  padding-bottom: 4px;
+}
+@media (max-width: 767px) {
+  .recipe-list b {
+    font-size: 16px;
+  }
+}
+.recipe-list ol {
+  list-style: decimal;
+  font-weight: 700;
+  padding-left: 1.2em;
+}
+.recipe-list ul li span,
+.recipe-list ol li span {
+  display: block;
+  color: var(--blue);
+  font-weight: 400;
+  padding: 5px 0px;
 }
 
 .dropzone {

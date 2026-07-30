@@ -1,3 +1,5 @@
+import { showRecipe } from './recipes.js';
+
 export const popup = {
   _backdrop: null,
   _popup: null,
@@ -18,7 +20,7 @@ export const popup = {
     this._bindCloseEvents();
   },
 
-  async open(id) {
+  async open(id, content_id) {
     if (this._isOpening || this._isAnimating) return;
     this._isOpening = true;
 
@@ -27,6 +29,10 @@ export const popup = {
       console.warn(`Попап с id="${id}" не найден`);
       this._isOpening = false;
       return;
+    }
+
+    if (id === 'recipe' && content_id) {
+      showRecipe(content_id);
     }
 
     const isVisible = this._popup.classList.contains('visible');
@@ -48,6 +54,7 @@ export const popup = {
 
     this._popup.classList.remove('visible');
     this._backdrop.classList.remove('active');
+    document.body.classList.remove('popup-is-opened');
 
     await this._waitForTransition(this._backdrop);
 
@@ -87,7 +94,7 @@ export const popup = {
       const openBtn = e.target.closest('[data-popup-open]');
       if (openBtn) {
         e.preventDefault();
-        this.open(openBtn.dataset.popupOpen);
+        this.open(openBtn.dataset.popupOpen, openBtn.dataset.recipeId);
         return;
       }
 
@@ -118,6 +125,7 @@ export const popup = {
 
     this._backdrop.classList.add('active');
     this._popup.classList.add('visible');
+    document.body.classList.add('popup-is-opened');
 
     await this._waitForTransition(this._backdrop);
   },

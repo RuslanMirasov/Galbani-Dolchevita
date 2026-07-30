@@ -134,6 +134,10 @@ $popup_transition: 0.5s;
     margin: 0px auto;
   }
 
+  &.recipe {
+    max-width: 768px;
+  }
+
   &.dark {
     background: linear-gradient(#1e2d68, #294b92);
     .label__text {

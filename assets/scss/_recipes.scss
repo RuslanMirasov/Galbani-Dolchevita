@@ -1,0 +1,119 @@
+.recipe-content {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 20px;
+}
+
+.recipe-subtitle {
+  display: inline-flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 10px;
+  color: var(--blue);
+  @media (max-width: 767px) {
+    gap: 6px;
+  }
+
+  span {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    padding: 4px 0px;
+    text-align: left;
+    @media (max-width: 767px) {
+      font-size: 14px;
+    }
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 500;
+    padding: 4px 14px;
+    border-radius: 16px;
+    background: var(--light-blue);
+    text-align: left;
+    @media (max-width: 767px) {
+      font-size: 14px;
+      border-radius: 14px;
+      padding: 4px 10px;
+    }
+    //  &:after {
+    //    content: '>';
+    //    display: inline;
+    //    margin-left: 8px;
+    //    color: var(--red);
+    //  }
+  }
+}
+
+.recipe-image {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  border-radius: 30px;
+  @media (max-width: 767px) {
+    border-radius: 20px;
+  }
+  img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 45%;
+  }
+}
+
+.recipe-list {
+  width: calc((100% - 20px) / 2);
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+  text-align: left;
+  color: var(--red);
+  font-size: 18px;
+  line-height: 1.3;
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
+  b {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--blue);
+    padding-bottom: 4px;
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
+  }
+  ol {
+    list-style: decimal;
+    font-weight: 700;
+    padding-left: 1.2em;
+  }
+  ul,
+  ol {
+    li span {
+      display: block;
+      color: var(--blue);
+      font-weight: 400;
+      padding: 5px 0px;
+    }
+  }
+}

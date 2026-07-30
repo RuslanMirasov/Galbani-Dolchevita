@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="theme-color" content="#1e2d68" />
-    <meta name="description" content="Galbani - Продукция" />
+    <meta name="description" content="Galbani - Интерактивный пазл" />
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="./assets/css/styles.min.css?v=1.1" />
-    <title>Galbani - Продукция</title>
+    <title>Galbani - Интерактивный пазл</title>
   </head>
   <body>
     <!--PRELOADER-->
@@ -25,6 +25,7 @@
 
           <button type="button" class="go-back" data-popup-open="go-back"><span>Назад</span></button>
           <div class="game-timer"><span>99</span></div>
+          <p class="game-bottom-text">Выбери регион, узнай рецепт</p>
 
           <div class="game-wrapper"></div>
         </section>
@@ -71,6 +72,12 @@
               <button type="button" class="button big light" data-popup-close><span>Продолжить</span></button>
             </div>
           </div>
+        </div>
+
+        <!--RECIPE POPUP-->
+        <div class="popup-content recipe" id="recipe">
+          <button class="popup-close" data-popup-close></button>
+          <div class="recipe-content" data-recipe-content></div>
         </div>
       </div>
     </div>
