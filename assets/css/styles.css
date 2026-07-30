@@ -2124,6 +2124,12 @@ button:disabled {
   gap: 10px;
   margin-top: 90px;
 }
+@media (min-width: 1441px) {
+  .calendar {
+    padding: 20px 24px 20px 10px;
+    border-radius: 20px;
+  }
+}
 .calendar p {
   display: block;
   position: relative;
@@ -2149,6 +2155,11 @@ button:disabled {
   height: 100%;
   background: var(--white);
   z-index: 0;
+}
+@media (min-width: 1441px) {
+  .calendar:before {
+    content: none;
+  }
 }
 
 @media (max-width: 1439px) {
