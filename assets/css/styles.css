@@ -1781,6 +1781,14 @@ button:disabled {
             transform: translate(45%, 0%);
   }
 }
+@media (min-width: 2560px) {
+  .hero-image {
+    width: 650px;
+    -webkit-transform: translate(80%, 0%);
+        -ms-transform: translate(80%, 0%);
+            transform: translate(80%, 0%);
+  }
+}
 
 @media (max-width: 1439px) {
   .section--hero {

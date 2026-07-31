@@ -57,6 +57,10 @@
     width: 550px;
     transform: translate(45%, 0%);
   }
+  @media (min-width: 2560px) {
+    width: 650px;
+    transform: translate(80%, 0%);
+  }
 }
 
 // 1366
