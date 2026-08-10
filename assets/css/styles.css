@@ -1214,6 +1214,9 @@ button:disabled {
   z-index: 2;
   width: 120px;
   height: 60px;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
 }
 .logo-wrapper img {
   width: 100%;
