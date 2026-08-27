@@ -37,9 +37,9 @@
   z-index: 2;
   width: 120px;
   height: 60px;
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
+  // pointer-events: none;
+  // opacity: 0;
+  // visibility: hidden;
   img {
     width: 100%;
   }
@@ -83,7 +83,7 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  gap: 24px;
+  gap: 20px;
 
   li {
     .menu__link {
@@ -118,7 +118,7 @@
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
   .header {
     &:before {
       content: '';

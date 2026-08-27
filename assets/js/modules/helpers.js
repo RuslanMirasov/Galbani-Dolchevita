@@ -84,26 +84,26 @@ export const hidePreloader = () => {
   setTimeout(() => {
     preloader.classList.add('hidden');
     preloader.style.pointerEvents = `none`;
-    // if (preloader.classList.contains('main-preloader')) {
-    //   setTimeout(() => {
-    //     const scrollTop = body.scrollTop;
+    if (preloader.classList.contains('main-preloader')) {
+      setTimeout(() => {
+        const scrollTop = body.scrollTop;
 
-    //     preloader.style.transition = 'none';
-    //     preloader.style.position = 'absolute';
-    //     preloader.style.transform = `translateY(${scrollTop}px)`;
-    //     setTimeout(() => {
-    //       preloader.style.transition = 'transform 1s ease 0s';
-    //       preloader.style.transform = `translateY(0px)`;
-    //       preloader.style.pointerEvents = `none`;
-    //     }, 50);
-    //   }, 1000);
-    // } else {
-    //   setTimeout(() => {
-    //     preloader.style.transition = 'transform 2s ease 0s';
-    //     preloader.style.transform = `translateY(-101%)`;
-    //     preloader.style.pointerEvents = `none`;
-    //   }, 1000);
-    // }
+        preloader.style.transition = 'none';
+        preloader.style.position = 'absolute';
+        preloader.style.transform = `translateY(${scrollTop}px)`;
+        setTimeout(() => {
+          preloader.style.transition = 'transform 1s ease 0s';
+          preloader.style.transform = `translateY(0px)`;
+          preloader.style.pointerEvents = `none`;
+        }, 50);
+      }, 1000);
+    } else {
+      setTimeout(() => {
+        preloader.style.transition = 'transform 2s ease 0s';
+        preloader.style.transform = `translateY(-101%)`;
+        preloader.style.pointerEvents = `none`;
+      }, 1000);
+    }
   }, 300);
 
   setTimeout(() => {

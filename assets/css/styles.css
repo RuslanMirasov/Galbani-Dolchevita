@@ -1214,9 +1214,6 @@ button:disabled {
   z-index: 2;
   width: 120px;
   height: 60px;
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
 }
 .logo-wrapper img {
   width: 100%;
@@ -1285,7 +1282,7 @@ button:disabled {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  gap: 24px;
+  gap: 20px;
 }
 .menu li .menu__link {
   font-size: 16px;
@@ -1312,7 +1309,7 @@ button:disabled {
     font-size: 14px;
   }
 }
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
   .header:before {
     content: "";
     position: absolute;
@@ -1489,12 +1486,12 @@ button:disabled {
     gap: 30px;
   }
 }
-@media (max-width: 1023px) and (max-width: 767px) {
+@media (max-width: 1199px) and (max-width: 767px) {
   .menu {
     padding: 60px 20px 40px 20px;
   }
 }
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
   .menu li {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
